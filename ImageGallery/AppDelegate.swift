@@ -20,20 +20,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Override point for customization after application launch.
     
     let image = UIImage(named: "photo")!
-    let username = "username4"
-    let email = "email4@gmail.com"
+    let username = "username10"
+    let email = "email10@gmail.com"
     let password = "password1"
-    APIUserSignUp.requestWith(username: username, email: email, password: password, avatar: image, success: {
+    /*APIUserSignUp.requestWith(username: username, email: email, password: password, avatar: image, success: {
       APIUserLogIn.requestWith(email: email,
                                password: password,
                                success: { (token, avatarURL, signUpDate) in
-                                
+                             print(avatarURL)
+                                print(token)
       }) { (error) in
         
       }
     }) { (error) in
       
-    }
+    }*/
+    /*APIUserLogIn.requestWith(email: email,
+                             password: password,
+                             success: { (token, avatarURL, signUpDate) in
+                              print(avatarURL)
+                              print(token)
+    }) { (error) in
+      
+    }*/
+    
+    APIImagesAllImages.requestWith(token: "1976b3c0a8b7941199b43a1456a20ef1")
+    
+    self.window?.rootViewController = MainViewController()
+    self.window?.makeKeyAndVisible()
     
     return true
   }
