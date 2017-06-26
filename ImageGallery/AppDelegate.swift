@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
     }*/
     
-    APIImagesAllImages.requestWith(token: "1976b3c0a8b7941199b43a1456a20ef1")
+    /*APIImagesAllImages.requestWith(token: "1976b3c0a8b7941199b43a1456a20ef1")
     
     
     
@@ -56,9 +56,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                   description: "sd;fjdskofj",
                                   hashtag: "dkfhjdklsf",
                                   latitude: 6,
-                                  longitude: 6)
+                                  longitude: 6)*/
     
     
+    APIImagesGenerateGIF.requestWith(token: "1976b3c0a8b7941199b43a1456a20ef1",
+                                     weather: "Clouds",
+                                     success: { (GIFURL) in
+                                      
+    }) { (error) in
+      
+    }
     
     
     

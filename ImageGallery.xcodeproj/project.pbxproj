@@ -34,6 +34,7 @@
 		C57BBE271F014326009FF893 /* SendButtonMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BBE261F014326009FF893 /* SendButtonMainTableViewCell.swift */; };
 		C57BBE291F014917009FF893 /* APIImagesAllImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BBE281F014917009FF893 /* APIImagesAllImages.swift */; };
 		C57BBE2B1F014DEF009FF893 /* APIImagesAddImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BBE2A1F014DEF009FF893 /* APIImagesAddImage.swift */; };
+		C57BBE2D1F015833009FF893 /* APIImagesGenerateGIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BBE2C1F015833009FF893 /* APIImagesGenerateGIF.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		C57BBE261F014326009FF893 /* SendButtonMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendButtonMainTableViewCell.swift; sourceTree = "<group>"; };
 		C57BBE281F014917009FF893 /* APIImagesAllImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIImagesAllImages.swift; sourceTree = "<group>"; };
 		C57BBE2A1F014DEF009FF893 /* APIImagesAddImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIImagesAddImage.swift; sourceTree = "<group>"; };
+		C57BBE2C1F015833009FF893 /* APIImagesGenerateGIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIImagesGenerateGIF.swift; sourceTree = "<group>"; };
 		CC4007E840A9C41F8532C5BC /* Pods-ImageGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageGallery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageGallery/Pods-ImageGallery.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +135,7 @@
 				C57BBDFA1F010DF0009FF893 /* APIUserLogIn.swift */,
 				C57BBE281F014917009FF893 /* APIImagesAllImages.swift */,
 				C57BBE2A1F014DEF009FF893 /* APIImagesAddImage.swift */,
+				C57BBE2C1F015833009FF893 /* APIImagesGenerateGIF.swift */,
 			);
 			path = NetworkingLayer;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				C57BBE131F012B55009FF893 /* TableViewSectionController.swift in Sources */,
 				C57BBE181F012BA3009FF893 /* MainView.swift in Sources */,
 				C57BBE111F012B55009FF893 /* TableViewCellController.swift in Sources */,
+				C57BBE2D1F015833009FF893 /* APIImagesGenerateGIF.swift in Sources */,
 				C57BBE201F0132AB009FF893 /* AvatarMainTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
