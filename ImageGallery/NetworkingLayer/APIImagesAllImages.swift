@@ -13,7 +13,7 @@ import SwiftyJSON
 
 class APIImagesAllImages {
   
-  typealias successAPIUserSignUpCompletionHandlerAPIUserLogIn = () -> Void
+  typealias successAPIUserSignUpCompletionHandlerAPIUserLogIn = (_ smallImageURL: URL, _ bigImageURL: URL, _ address: String, _ weather: String?) -> Void
   typealias errorAPIUserSignUpCompletionHandlerAPIUserLogIn = (_ error: Error) -> Void
   
   private static let allImagesEndpoint = "/all"

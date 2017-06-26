@@ -33,6 +33,7 @@
 		C57BBE251F0142FE009FF893 /* SendButtonMainTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BBE241F0142FE009FF893 /* SendButtonMainTableViewCellController.swift */; };
 		C57BBE271F014326009FF893 /* SendButtonMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BBE261F014326009FF893 /* SendButtonMainTableViewCell.swift */; };
 		C57BBE291F014917009FF893 /* APIImagesAllImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BBE281F014917009FF893 /* APIImagesAllImages.swift */; };
+		C57BBE2B1F014DEF009FF893 /* APIImagesAddImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BBE2A1F014DEF009FF893 /* APIImagesAddImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		C57BBE241F0142FE009FF893 /* SendButtonMainTableViewCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendButtonMainTableViewCellController.swift; sourceTree = "<group>"; };
 		C57BBE261F014326009FF893 /* SendButtonMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendButtonMainTableViewCell.swift; sourceTree = "<group>"; };
 		C57BBE281F014917009FF893 /* APIImagesAllImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIImagesAllImages.swift; sourceTree = "<group>"; };
+		C57BBE2A1F014DEF009FF893 /* APIImagesAddImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIImagesAddImage.swift; sourceTree = "<group>"; };
 		CC4007E840A9C41F8532C5BC /* Pods-ImageGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageGallery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageGallery/Pods-ImageGallery.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +132,7 @@
 				C57BBDFC1F0120FB009FF893 /* APIUserSignUp.swift */,
 				C57BBDFA1F010DF0009FF893 /* APIUserLogIn.swift */,
 				C57BBE281F014917009FF893 /* APIImagesAllImages.swift */,
+				C57BBE2A1F014DEF009FF893 /* APIImagesAddImage.swift */,
 			);
 			path = NetworkingLayer;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				C57BBDFD1F0120FB009FF893 /* APIUserSignUp.swift in Sources */,
 				C57BBE1D1F012F56009FF893 /* MainTableView.swift in Sources */,
 				C57BBE0E1F012B55009FF893 /* DefaultTableViewController.swift in Sources */,
+				C57BBE2B1F014DEF009FF893 /* APIImagesAddImage.swift in Sources */,
 				C57BBE291F014917009FF893 /* APIImagesAllImages.swift in Sources */,
 				C57BBDE61F00FC88009FF893 /* AppDelegate.swift in Sources */,
 				C57BBE131F012B55009FF893 /* TableViewSectionController.swift in Sources */,

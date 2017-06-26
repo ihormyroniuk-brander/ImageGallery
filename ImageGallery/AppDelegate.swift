@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     
-    let image = UIImage(named: "photo")!
+    let image = UIImage(named: "panda")!
     let username = "username10"
     let email = "email10@gmail.com"
     let password = "password1"
@@ -45,6 +45,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }*/
     
     APIImagesAllImages.requestWith(token: "1976b3c0a8b7941199b43a1456a20ef1")
+    
+    
+    
+    
+    
+    
+    APIImagesAddImage.requestWith(token: "1976b3c0a8b7941199b43a1456a20ef1",
+                                  image: image,
+                                  description: "sd;fjdskofj",
+                                  hashtag: "dkfhjdklsf",
+                                  latitude: 6,
+                                  longitude: 6)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     self.window?.rootViewController = MainViewController()
     self.window?.makeKeyAndVisible()
