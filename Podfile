@@ -6,5 +6,6 @@ target 'ImageGallery' do
   use_frameworks!
 
   # Pods for ImageGallery
-
+  pod 'Alamofire', '~> 4.4'
+  pod 'SwiftyJSON'
 end

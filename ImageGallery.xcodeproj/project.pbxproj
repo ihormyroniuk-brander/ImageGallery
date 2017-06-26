@@ -13,6 +13,9 @@
 		C57BBDEB1F00FC88009FF893 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57BBDE91F00FC88009FF893 /* Main.storyboard */; };
 		C57BBDED1F00FC88009FF893 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C57BBDEC1F00FC88009FF893 /* Assets.xcassets */; };
 		C57BBDF01F00FC88009FF893 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57BBDEE1F00FC88009FF893 /* LaunchScreen.storyboard */; };
+		C57BBDF91F0100A6009FF893 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BBDF81F0100A6009FF893 /* API.swift */; };
+		C57BBDFB1F010DF0009FF893 /* APIUserLogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BBDFA1F010DF0009FF893 /* APIUserLogIn.swift */; };
+		C57BBDFD1F0120FB009FF893 /* APIUserSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BBDFC1F0120FB009FF893 /* APIUserSignUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		C57BBDEC1F00FC88009FF893 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C57BBDEF1F00FC88009FF893 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C57BBDF11F00FC88009FF893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C57BBDF81F0100A6009FF893 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		C57BBDFA1F010DF0009FF893 /* APIUserLogIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUserLogIn.swift; sourceTree = "<group>"; };
+		C57BBDFC1F0120FB009FF893 /* APIUserSignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUserSignUp.swift; sourceTree = "<group>"; };
 		CC4007E840A9C41F8532C5BC /* Pods-ImageGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageGallery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageGallery/Pods-ImageGallery.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +75,8 @@
 		C57BBDE41F00FC88009FF893 /* ImageGallery */ = {
 			isa = PBXGroup;
 			children = (
+				C57BBDFE1F01255F009FF893 /* ApplicationLayer */,
+				C57BBDF71F00FF6D009FF893 /* NetworkingLayer */,
 				C57BBDE51F00FC88009FF893 /* AppDelegate.swift */,
 				C57BBDE71F00FC88009FF893 /* ViewController.swift */,
 				C57BBDE91F00FC88009FF893 /* Main.storyboard */,
@@ -77,6 +85,23 @@
 				C57BBDF11F00FC88009FF893 /* Info.plist */,
 			);
 			path = ImageGallery;
+			sourceTree = "<group>";
+		};
+		C57BBDF71F00FF6D009FF893 /* NetworkingLayer */ = {
+			isa = PBXGroup;
+			children = (
+				C57BBDF81F0100A6009FF893 /* API.swift */,
+				C57BBDFA1F010DF0009FF893 /* APIUserLogIn.swift */,
+				C57BBDFC1F0120FB009FF893 /* APIUserSignUp.swift */,
+			);
+			path = NetworkingLayer;
+			sourceTree = "<group>";
+		};
+		C57BBDFE1F01255F009FF893 /* ApplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ApplicationLayer;
 			sourceTree = "<group>";
 		};
 		E03FAA19CEFF573272A946B9 /* Pods */ = {
@@ -212,7 +237,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C57BBDFB1F010DF0009FF893 /* APIUserLogIn.swift in Sources */,
 				C57BBDE81F00FC88009FF893 /* ViewController.swift in Sources */,
+				C57BBDF91F0100A6009FF893 /* API.swift in Sources */,
+				C57BBDFD1F0120FB009FF893 /* APIUserSignUp.swift in Sources */,
 				C57BBDE61F00FC88009FF893 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,6 +407,7 @@
 				C57BBDF61F00FC88009FF893 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

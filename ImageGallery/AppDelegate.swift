@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+    
+    let image = UIImage(named: "photo")!
+    let username = "username4"
+    let email = "email4@gmail.com"
+    let password = "password1"
+    APIUserSignUp.requestWith(username: username, email: email, password: password, avatar: image, success: {
+      APIUserLogIn.requestWith(email: email,
+                               password: password,
+                               success: { (token, avatarURL, signUpDate) in
+                                
+      }) { (error) in
+        
+      }
+    }) { (error) in
+      
+    }
+    
     return true
   }
 
