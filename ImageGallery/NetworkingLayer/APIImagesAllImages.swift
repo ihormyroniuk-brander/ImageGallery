@@ -20,19 +20,11 @@ class APIImagesAllImages {
   
   private static let URLString: String = API.baseURL + APIImagesAllImages.allImagesEndpoint
   
-  private static func headersWith(token: String?) -> HTTPHeaders {
-    let headers: HTTPHeaders = [
-      "token": token ?? ""
-    ]
-    return headers
-  }
-  
   public static func requestWith(token: String?) {
-    let headers = APIImagesAllImages.headersWith(token: token)
+    let headers = API.headersWith(token: token)
     Alamofire.request(APIImagesAllImages.URLString, headers: headers).responseJSON { response in
       if response.response?.statusCode == 200 {
         let responseJSON = JSON(data: response.data!)
-        print(responseJSON)
       } else {
         
       }

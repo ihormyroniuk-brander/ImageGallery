@@ -7,7 +7,17 @@
 //
 
 import Foundation
+import Alamofire
 
 class API {
+  
   public static let baseURL = "http://api.doitserver.in.ua"
+  
+  public static func headersWith(token: String?) -> HTTPHeaders {
+    let headers: HTTPHeaders = [
+      "token": token ?? ""
+    ]
+    return headers
+  }
+  
 }

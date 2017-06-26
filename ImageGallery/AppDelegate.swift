@@ -60,9 +60,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     APIImagesGenerateGIF.requestWith(token: "1976b3c0a8b7941199b43a1456a20ef1",
-                                     weather: "Clouds",
+                                     weather: "ghghgh",
                                      success: { (GIFURL) in
-                                      
+                                      print(GIFURL)
     }) { (error) in
       
     }
