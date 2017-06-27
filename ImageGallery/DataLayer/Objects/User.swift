@@ -10,6 +10,10 @@ import UIKit
 
 class User: NSObject {
 
-  
+  var username: String?
+  var email: String?
+  var avatarURLString: String?
+  var signUpDate: Date?
+  var token: String?
   
 }

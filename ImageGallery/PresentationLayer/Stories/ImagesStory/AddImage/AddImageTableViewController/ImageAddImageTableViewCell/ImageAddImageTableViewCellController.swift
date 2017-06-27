@@ -56,7 +56,7 @@ class ImageAddImageTableViewCellController: DefaultTableViewCellController, UINa
   }
   
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-    image = info[UIImagePickerControllerOriginalImage] as! UIImage
+    image = info[UIImagePickerControllerOriginalImage] as? UIImage
     (delegate as! UITableViewController).tableView.reloadData()
     delegate?.dismiss(imagePickerController: picker)
   }

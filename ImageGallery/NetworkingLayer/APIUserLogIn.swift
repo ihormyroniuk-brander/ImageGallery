@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class APIUserLogIn {
   
-  typealias successAPIUserLogInCompletionHandlerAPIUserLogIn = (_ token: String, _ avatarURL: URL, _ signUpDate: Date) -> Void
+  typealias successAPIUserLogInCompletionHandlerAPIUserLogIn = (_ user: User) -> Void
   typealias errorAPIUserLogInCompletionHandlerAPIUserLogIn = (_ error: Error) -> Void
   
   private static let logInEndpoint = "/login"
@@ -35,26 +35,20 @@ class APIUserLogIn {
     Alamofire.request(URLString, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
       if response.response?.statusCode == 200 {
         let responseJSON = JSON(data: response.data!)
-        let token = APIUserLogIn.tokenFrom(responseJSON: responseJSON)
-        let avatarURL = APIUserLogIn.avatarURLStringFrom(responseJSON: responseJSON)
-        let signUpDate = APIUserLogIn.signUpDateFrom(responseJSON: responseJSON)
-        success(token, avatarURL, signUpDate)
+        let user = APIUserLogIn.userFrom(responseJSON: responseJSON)
+        user.email = email
+        success(user)
       } else {
         
       }
     }
   }
   
-  private static func tokenFrom(responseJSON: JSON) -> String {
-    return responseJSON["token"].stringValue
-  }
-  
-  private static func avatarURLStringFrom(responseJSON: JSON) -> URL {
-    return URL(string: responseJSON["avatar"].stringValue)!
-  }
-  
-  private static func signUpDateFrom(responseJSON: JSON) -> Date {
-    return Date()
+  private static func userFrom(responseJSON: JSON) -> User {
+    let user = User()
+    user.token = responseJSON["token"].stringValue
+    user.avatarURLString = responseJSON["avatar"].stringValue
+    return user
   }
   
 }

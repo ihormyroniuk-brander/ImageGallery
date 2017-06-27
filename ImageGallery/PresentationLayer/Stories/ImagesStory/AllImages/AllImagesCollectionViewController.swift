@@ -12,8 +12,20 @@ private let reuseIdentifier = "Cell"
 
 class AllImagesCollectionViewController: UICollectionViewController {
 
+  var images: [IGImage] = []
+  
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+      
+      APIImagesAllImages.requestWith(token: "1976b3c0a8b7941199b43a1456a20ef1",
+                                     success: { (images, GIFImages) in
+                      self.images = images
+                                      self.collectionView?.reloadData()
+      }) { (error) in
+        
+      }
+      
       
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -26,7 +38,7 @@ class AllImagesCollectionViewController: UICollectionViewController {
       self.collectionView?.bounces = true
       self.collectionView?.alwaysBounceVertical = true
       (self.collectionViewLayout as! UICollectionViewFlowLayout).itemSize = CGSize(width: (UIScreen.main.bounds.width - 60) / 2,
-                                                                                   height: 80)
+                                                                                   height: 120)
       (self.collectionViewLayout as! UICollectionViewFlowLayout).minimumInteritemSpacing = 20
       (self.collectionViewLayout as! UICollectionViewFlowLayout).sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     }
@@ -56,14 +68,15 @@ class AllImagesCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 7
+        return self.images.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ImageAllImagesCollectionViewCell
+      cell.set(imageURL: URL(string: self.images[indexPath.item].smallImageURLString!)!)
         // Configure the cell
-    
+    cell.set(weatherText: self.images[indexPath.item].weather)
+      cell.set(addressText: self.images[indexPath.item].address)
         return cell
     }
 

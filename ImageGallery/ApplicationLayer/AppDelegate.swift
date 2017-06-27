@@ -19,10 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     
-    let image = UIImage(named: "panda")!
+    /*let image = UIImage(named: "panda")!
     let username = "username10"
     let email = "email10@gmail.com"
-    let password = "password1"
+    let password = "password1"*/
     /*APIUserSignUp.requestWith(username: username, email: email, password: password, avatar: image, success: {
       APIUserLogIn.requestWith(email: email,
                                password: password,
@@ -44,9 +44,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
     }*/
     
-    APIImagesAllImages.requestWith(token: "1976b3c0a8b7941199b43a1456a20ef1")
+    //APIImagesAllImages.requestWith(token: "1976b3c0a8b7941199b43a1456a20ef1")
     
-    
+    /*APIImagesAllImages.requestWith(token: "1976b3c0a8b7941199b43a1456a20ef1",
+                                   success: { (images, GIFImages) in
+                                    
+    }) { (error) in
+      
+    }*/
     
     
     
@@ -59,13 +64,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                   longitude: 6)*/
     
     
-    APIImagesGenerateGIF.requestWith(token: "1976b3c0a8b7941199b43a1456a20ef1",
+    /*APIImagesGenerateGIF.requestWith(token: "1976b3c0a8b7941199b43a1456a20ef1",
                                      weather: "Clouds",
                                      success: { (GIFURL) in
                                       print(GIFURL)
     }) { (error) in
       
-    }
+    }*/
     
     
     

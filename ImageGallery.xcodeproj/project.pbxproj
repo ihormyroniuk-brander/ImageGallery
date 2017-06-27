@@ -52,9 +52,9 @@
 		C59B81C91F02844A00D17168 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81C81F02844A00D17168 /* CoreData.swift */; };
 		C59B81CD1F0284D000D17168 /* FileSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81CC1F0284D000D17168 /* FileSystem.swift */; };
 		C59B81CF1F0285AA00D17168 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81CE1F0285AA00D17168 /* Application.swift */; };
-		C59B81D21F02881A00D17168 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81D11F02881A00D17168 /* Image.swift */; };
+		C59B81D21F02881A00D17168 /* IGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81D11F02881A00D17168 /* IGImage.swift */; };
 		C59B81D41F02882F00D17168 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81D31F02882F00D17168 /* User.swift */; };
-		C59B81D61F02883C00D17168 /* GIFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81D51F02883C00D17168 /* GIFImage.swift */; };
+		C59B81D61F02883C00D17168 /* IGGIFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81D51F02883C00D17168 /* IGGIFImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,9 +106,9 @@
 		C59B81C81F02844A00D17168 /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		C59B81CC1F0284D000D17168 /* FileSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystem.swift; sourceTree = "<group>"; };
 		C59B81CE1F0285AA00D17168 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
-		C59B81D11F02881A00D17168 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		C59B81D11F02881A00D17168 /* IGImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGImage.swift; sourceTree = "<group>"; };
 		C59B81D31F02882F00D17168 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		C59B81D51F02883C00D17168 /* GIFImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFImage.swift; sourceTree = "<group>"; };
+		C59B81D51F02883C00D17168 /* IGGIFImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGGIFImage.swift; sourceTree = "<group>"; };
 		CC4007E840A9C41F8532C5BC /* Pods-ImageGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageGallery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageGallery/Pods-ImageGallery.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,7 +194,6 @@
 		C57BBDFF1F0128FA009FF893 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				C59B81BE1F02800000D17168 /* New Group */,
 				C57BBE001F0129C5009FF893 /* Stories */,
 			);
 			path = PresentationLayer;
@@ -378,13 +377,6 @@
 			name = "New Group";
 			sourceTree = "<group>";
 		};
-		C59B81BE1F02800000D17168 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
-			sourceTree = "<group>";
-		};
 		C59B81BF1F0280CE00D17168 /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -431,8 +423,8 @@
 			isa = PBXGroup;
 			children = (
 				C59B81D31F02882F00D17168 /* User.swift */,
-				C59B81D11F02881A00D17168 /* Image.swift */,
-				C59B81D51F02883C00D17168 /* GIFImage.swift */,
+				C59B81D11F02881A00D17168 /* IGImage.swift */,
+				C59B81D51F02883C00D17168 /* IGGIFImage.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -592,7 +584,7 @@
 				C57BBE121F012B55009FF893 /* TableViewController.swift in Sources */,
 				C57BBDFD1F0120FB009FF893 /* APIUserSignUp.swift in Sources */,
 				C59B81AF1F024A8000D17168 /* AddImageTableView.swift in Sources */,
-				C59B81D21F02881A00D17168 /* Image.swift in Sources */,
+				C59B81D21F02881A00D17168 /* IGImage.swift in Sources */,
 				C59B81B41F024F6500D17168 /* ImageAddImageTableViewCellController.swift in Sources */,
 				C57BBE1D1F012F56009FF893 /* MainTableView.swift in Sources */,
 				C57BBE0E1F012B55009FF893 /* DefaultTableViewController.swift in Sources */,
@@ -613,7 +605,7 @@
 				C59B81A51F02403300D17168 /* ImageAllImagesCollectionViewCellController.swift in Sources */,
 				C57BBE201F0132AB009FF893 /* AvatarMainTableViewCell.swift in Sources */,
 				C59B81B91F026C7400D17168 /* GIFViewController.swift in Sources */,
-				C59B81D61F02883C00D17168 /* GIFImage.swift in Sources */,
+				C59B81D61F02883C00D17168 /* IGGIFImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,7 @@ class AllImagesViewController: UIViewController {
   private let allImagesCollectionViewController = AllImagesCollectionViewController.init(collectionViewLayout: UICollectionViewFlowLayout())
   private let customView = AllImagesView()
   
+  
   override func loadView() {
     self.view = customView
   }
