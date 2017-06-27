@@ -25,7 +25,7 @@ class AllImagesViewController: UIViewController {
     
     
     let button1 = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(AllImagesViewController.sayHello))
-    let button2 = UIBarButtonItem(title: "GIF", style: .plain, target: self, action: #selector(AllImagesViewController.sayHello))
+    let button2 = UIBarButtonItem(title: "GIF", style: .plain, target: self, action: #selector(AllImagesViewController.sayHi))
     self.navigationItem.rightBarButtonItems  = [button1, button2]
   }
 
@@ -38,5 +38,9 @@ class AllImagesViewController: UIViewController {
   
   func sayHello(sender: UIBarButtonItem) {
     navigationController?.pushViewController(AddImageViewController(), animated: true)
+  }
+  
+  func sayHi(sender: UIBarButtonItem) {
+    present(GIFViewController(), animated: false, completion: nil)
   }
 }

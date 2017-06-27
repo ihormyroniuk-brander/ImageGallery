@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddImageTableViewController: DefaultTableViewController {
+class AddImageTableViewController: DefaultTableViewController, ImageAddImageTableViewCellControllerDelegate {
 
   override func loadView() {
     super.loadView()
@@ -20,11 +20,38 @@ class AddImageTableViewController: DefaultTableViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+      registerTableView()
+      prepareTableViewDataSource()
+      self.tableView.reloadData()
     }
+  
+  // MARK: UITableView
+  
+  func registerTableView() {
+    ImageAddImageTableViewCellController.register(in: (tableView)!)
+  }
+  
+  let imageAddImageTableViewCellController = ImageAddImageTableViewCellController()
+  
+  func prepareTableViewDataSource() {
+    sectionsControllers = []
+    
+    let sectionController = DefaultTableViewSectionController()
+    
+    imageAddImageTableViewCellController.delegate = self
+    sectionController.cellsControllers.append(imageAddImageTableViewCellController)
+    
+    sectionsControllers.append(sectionController)
+  }
+  
+  // MARK: ImageAddImageTableViewCellControllerDelegate
+  
+  func present(imagePickerController: UIImagePickerController) {
+    self.present(imagePickerController, animated: true, completion: nil)
+  }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+  func dismiss(imagePickerController: UIImagePickerController) {
+    imagePickerController.dismiss(animated: true, completion: nil)
+  }
+  
 }

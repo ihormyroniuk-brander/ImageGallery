@@ -14,7 +14,7 @@ class AddImageTableView: UITableView {
     super.init(frame: CGRect.zero, style: UITableViewStyle.plain)
     
     self.backgroundColor = UIColor.purple
-    //self.separatorStyle = UITableViewCellSeparatorStyle.none
+    self.separatorStyle = UITableViewCellSeparatorStyle.none
   }
   
   required init?(coder aDecoder: NSCoder) {

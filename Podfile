@@ -10,5 +10,6 @@ target 'ImageGallery' do
   pod 'SwiftyJSON'
   pod 'SnapKit', '~> 3.2.0'
   pod 'SDWebImage'
-  pod 'UICollectionViewLeftAlignedLayout'
+  pod 'FLAnimatedImage', '~> 1.0'
+  pod 'SwiftGifOrigin', '~> 1.6.1'
 end

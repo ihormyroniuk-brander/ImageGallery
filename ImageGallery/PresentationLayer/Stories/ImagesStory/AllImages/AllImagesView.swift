@@ -22,7 +22,6 @@ class AllImagesView: UIView {
     self.addSubview(allImagesCollectionView)
     allImagesCollectionView.snp.makeConstraints { (make) -> Void in
       make.left.top.right.bottom.equalTo(self)
-      make.top.equalTo(90)
     }
   }
   

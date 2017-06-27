@@ -34,8 +34,8 @@ class APIImagesAddImage {
     let parameters: [String : Any] = [
       "description": description ?? "",
       "hashtag": hashtag ?? "",
-      "latitude": "0",
-      "longitude": "0"
+      "latitude": "\(latitude ?? 0)",
+      "longitude": "\(longitude ?? 0)"
     ]
     return parameters
   }
@@ -49,7 +49,8 @@ class APIImagesAddImage {
     let headers = APIImagesAddImage.headersWith(token: token)
     let parameters = APIImagesAddImage.parametersWith(description: description, hashtag: hashtag, latitude: latitude, longitude: longitude)
     Alamofire.upload(multipartFormData: { (multipartFormData) in
-      multipartFormData.append(UIImagePNGRepresentation(image)!, withName: "image", fileName: "image", mimeType: "image/png")
+      let imagePNG = UIImagePNGRepresentation(image)!
+      multipartFormData.append(imagePNG, withName: "image", fileName: "image", mimeType: "image/png")
       for (key, value) in parameters {
         multipartFormData.append((value as AnyObject).data(using: String.Encoding.utf8.rawValue)!, withName: key)
       }
