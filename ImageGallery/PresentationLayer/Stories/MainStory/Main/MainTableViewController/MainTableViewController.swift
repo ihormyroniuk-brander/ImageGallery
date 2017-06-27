@@ -49,6 +49,6 @@ class MainTableViewController: DefaultTableViewController, SendButtonMainTableVi
   
   
   func sendButtonTouchUpInsideEventAction() {
-    print("dsfkdjs ilfdjfkl ")
+    navigationController?.pushViewController(AllImagesViewController(), animated: true)
   }
 }

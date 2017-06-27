@@ -5,19 +5,22 @@ PODS:
   - SDWebImage/Core (4.0.0)
   - SnapKit (3.2.0)
   - SwiftyJSON (3.1.4)
+  - UICollectionViewLeftAlignedLayout (1.0.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - SDWebImage
   - SnapKit (~> 3.2.0)
   - SwiftyJSON
+  - UICollectionViewLeftAlignedLayout
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
 
-PODFILE CHECKSUM: b6a3d07b9cc70ad35c01d38373b1487db548ff2c
+PODFILE CHECKSUM: 832c430de9cd0ab08d96468007d9e87118cf6b27
 
 COCOAPODS: 1.2.1

@@ -27,10 +27,6 @@ class AvatarMainTableViewCellController: DefaultTableViewCellController {
     return cell
   }
   
-  override var shouldHighlight: Bool {
-    return true
-  }
-  
   override var estimatedHeight: CGFloat {
     return 318
   }
