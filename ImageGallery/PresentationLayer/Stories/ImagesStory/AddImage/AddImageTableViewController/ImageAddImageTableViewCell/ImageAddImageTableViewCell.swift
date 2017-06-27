@@ -10,7 +10,7 @@ import UIKit
 
 class ImageAddImageTableViewCell: UITableViewCell {
 
-  var imageImageView = UIImageView()
+  // MARK: Initializers
   
   override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -22,16 +22,33 @@ class ImageAddImageTableViewCell: UITableViewCell {
     super.init(coder: aDecoder)
   }
   
+  // MARK: UIImagePickerController
+  
+  let imageImageView = UIImageView()
+  
   private func setupAvatarImageView() {
-    self.addSubview(imageImageView)
-    imageImageView.snp.makeConstraints { (make) -> Void in
-      make.width.equalTo(168)
-      make.height.equalTo(168)
-      make.top.equalToSuperview().offset(100)
-      make.bottom.equalToSuperview().offset(-50)
-      make.centerX.equalToSuperview()
-    }
-    
+    placeImageImageView()
+    imageImageView.contentMode = UIViewContentMode.scaleAspectFit
     imageImageView.isUserInteractionEnabled = true
   }
+  
+  private func placeImageImageView() {
+    self.addSubview(imageImageView)
+    imageImageView.snp.makeConstraints { (make) -> Void in
+      make.height.equalTo(144)
+      make.left.equalToSuperview().offset(24)
+      make.top.equalToSuperview().offset(24)
+      make.right.equalToSuperview().offset(-24)
+      make.bottom.equalToSuperview().offset(-24)
+    }
+  }
+  
+  func set(image: UIImage?) {
+    if image != nil {
+      imageImageView.image = image;
+    } else {
+      imageImageView.image = UIImage(named: "photo")!;
+    }
+  }
+  
 }

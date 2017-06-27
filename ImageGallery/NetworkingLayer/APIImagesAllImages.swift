@@ -25,6 +25,7 @@ class APIImagesAllImages {
     Alamofire.request(APIImagesAllImages.URLString, headers: headers).responseJSON { response in
       if response.response?.statusCode == 200 {
         let responseJSON = JSON(data: response.data!)
+        print(responseJSON)
       } else {
         
       }

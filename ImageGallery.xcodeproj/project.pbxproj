@@ -48,6 +48,10 @@
 		C59B81B41F024F6500D17168 /* ImageAddImageTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81B31F024F6500D17168 /* ImageAddImageTableViewCellController.swift */; };
 		C59B81B91F026C7400D17168 /* GIFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81B81F026C7400D17168 /* GIFViewController.swift */; };
 		C59B81BB1F026C8400D17168 /* GIFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81BA1F026C8400D17168 /* GIFView.swift */; };
+		C59B81C31F02816000D17168 /* ApplicationUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81C21F02816000D17168 /* ApplicationUser.swift */; };
+		C59B81C71F0281EF00D17168 /* ImageGallery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C59B81C51F0281EF00D17168 /* ImageGallery.xcdatamodeld */; };
+		C59B81C91F02844A00D17168 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81C81F02844A00D17168 /* CoreData.swift */; };
+		C59B81CD1F0284D000D17168 /* FileSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81CC1F0284D000D17168 /* FileSystem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +99,10 @@
 		C59B81B31F024F6500D17168 /* ImageAddImageTableViewCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAddImageTableViewCellController.swift; sourceTree = "<group>"; };
 		C59B81B81F026C7400D17168 /* GIFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFViewController.swift; sourceTree = "<group>"; };
 		C59B81BA1F026C8400D17168 /* GIFView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFView.swift; sourceTree = "<group>"; };
+		C59B81C21F02816000D17168 /* ApplicationUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationUser.swift; sourceTree = "<group>"; };
+		C59B81C61F0281EF00D17168 /* ImageGallery.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ImageGallery.xcdatamodel; sourceTree = "<group>"; };
+		C59B81C81F02844A00D17168 /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		C59B81CC1F0284D000D17168 /* FileSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystem.swift; sourceTree = "<group>"; };
 		CC4007E840A9C41F8532C5BC /* Pods-ImageGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageGallery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageGallery/Pods-ImageGallery.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,10 +148,11 @@
 			isa = PBXGroup;
 			children = (
 				C57BBDFE1F01255F009FF893 /* ApplicationLayer */,
+				C59B81CA1F02848900D17168 /* SystemLayer */,
+				C59B81BF1F0280CE00D17168 /* DataLayer */,
 				C57BBDF71F00FF6D009FF893 /* NetworkingLayer */,
 				C57BBDFF1F0128FA009FF893 /* PresentationLayer */,
 				C57BBE031F012ACB009FF893 /* DevelopmentLayer */,
-				C57BBDE51F00FC88009FF893 /* AppDelegate.swift */,
 				C57BBDE71F00FC88009FF893 /* ViewController.swift */,
 				C57BBDE91F00FC88009FF893 /* Main.storyboard */,
 				C57BBDEC1F00FC88009FF893 /* Assets.xcassets */,
@@ -169,6 +178,8 @@
 		C57BBDFE1F01255F009FF893 /* ApplicationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				C57BBDE51F00FC88009FF893 /* AppDelegate.swift */,
+				C59B81BC1F0279C300D17168 /* User */,
 			);
 			path = ApplicationLayer;
 			sourceTree = "<group>";
@@ -176,6 +187,7 @@
 		C57BBDFF1F0128FA009FF893 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				C59B81BE1F02800000D17168 /* New Group */,
 				C57BBE001F0129C5009FF893 /* Stories */,
 			);
 			path = PresentationLayer;
@@ -311,6 +323,7 @@
 		C59B81AB1F024A2700D17168 /* AddImageTableViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C59B81BD1F027FE500D17168 /* New Group */,
 				C59B81AC1F024A6700D17168 /* AddImageTableViewController.swift */,
 				C59B81AE1F024A8000D17168 /* AddImageTableView.swift */,
 				C59B81B01F024EFC00D17168 /* ImageAddImageTableViewCell */,
@@ -342,6 +355,69 @@
 				C59B81BA1F026C8400D17168 /* GIFView.swift */,
 			);
 			path = GIF;
+			sourceTree = "<group>";
+		};
+		C59B81BC1F0279C300D17168 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				C59B81C21F02816000D17168 /* ApplicationUser.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		C59B81BD1F027FE500D17168 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		C59B81BE1F02800000D17168 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		C59B81BF1F0280CE00D17168 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				C59B81C11F02810200D17168 /* CoreData */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		C59B81C11F02810200D17168 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C59B81C41F0281D200D17168 /* Model */,
+				C59B81C81F02844A00D17168 /* CoreData.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		C59B81C41F0281D200D17168 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C59B81C51F0281EF00D17168 /* ImageGallery.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C59B81CA1F02848900D17168 /* SystemLayer */ = {
+			isa = PBXGroup;
+			children = (
+				C59B81CB1F0284B400D17168 /* FileSystem */,
+			);
+			path = SystemLayer;
+			sourceTree = "<group>";
+		};
+		C59B81CB1F0284B400D17168 /* FileSystem */ = {
+			isa = PBXGroup;
+			children = (
+				C59B81CC1F0284D000D17168 /* FileSystem.swift */,
+			);
+			path = FileSystem;
 			sourceTree = "<group>";
 		};
 		E03FAA19CEFF573272A946B9 /* Pods */ = {
@@ -481,6 +557,7 @@
 				C57BBE221F0138F8009FF893 /* AvatarMainTableViewCellController.swift in Sources */,
 				C59B81A01F023F8C00D17168 /* AllImagesCollectionViewController.swift in Sources */,
 				C57BBDFB1F010DF0009FF893 /* APIUserLogIn.swift in Sources */,
+				C59B81C91F02844A00D17168 /* CoreData.swift in Sources */,
 				C57BBE0D1F012B55009FF893 /* DefaultTableViewCellController.swift in Sources */,
 				C57BBDE81F00FC88009FF893 /* ViewController.swift in Sources */,
 				C57BBE101F012B55009FF893 /* DefaultTableViewSectionHeaderFooterViewController.swift in Sources */,
@@ -503,11 +580,14 @@
 				C57BBE0E1F012B55009FF893 /* DefaultTableViewController.swift in Sources */,
 				C57BBE2B1F014DEF009FF893 /* APIImagesAddImage.swift in Sources */,
 				C57BBE291F014917009FF893 /* APIImagesAllImages.swift in Sources */,
+				C59B81CD1F0284D000D17168 /* FileSystem.swift in Sources */,
 				C59B81B21F024F4D00D17168 /* ImageAddImageTableViewCell.swift in Sources */,
 				C57BBDE61F00FC88009FF893 /* AppDelegate.swift in Sources */,
 				C59B819B1F023D6800D17168 /* AllImagesViewController.swift in Sources */,
+				C59B81C71F0281EF00D17168 /* ImageGallery.xcdatamodeld in Sources */,
 				C57BBE131F012B55009FF893 /* TableViewSectionController.swift in Sources */,
 				C59B81AA1F0248C500D17168 /* AddImageView.swift in Sources */,
+				C59B81C31F02816000D17168 /* ApplicationUser.swift in Sources */,
 				C57BBE181F012BA3009FF893 /* MainView.swift in Sources */,
 				C57BBE111F012B55009FF893 /* TableViewCellController.swift in Sources */,
 				C57BBE2D1F015833009FF893 /* APIImagesGenerateGIF.swift in Sources */,
@@ -682,6 +762,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C59B81C51F0281EF00D17168 /* ImageGallery.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C59B81C61F0281EF00D17168 /* ImageGallery.xcdatamodel */,
+			);
+			currentVersion = C59B81C61F0281EF00D17168 /* ImageGallery.xcdatamodel */;
+			path = ImageGallery.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C57BBDDA1F00FC88009FF893 /* Project object */;
 }

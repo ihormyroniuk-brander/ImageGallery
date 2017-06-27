@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddImageViewController: UIViewController, UINavigationControllerDelegate {
+class AddImageViewController: UIViewController {
 
   let addImageTableViewController = AddImageTableViewController()
   private let customView = AddImageView()
@@ -34,8 +34,6 @@ class AddImageViewController: UIViewController, UINavigationControllerDelegate {
     let button1 = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(AddImageViewController.sayHello))
     self.navigationItem.rightBarButtonItems  = [button1]
   }
-  
-  var imagePicker = UIImagePickerController()
   
   func sayHello(sender: UIBarButtonItem) {
     APIImagesAddImage.requestWith(token: "1976b3c0a8b7941199b43a1456a20ef1",

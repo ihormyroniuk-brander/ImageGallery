@@ -17,11 +17,6 @@ class ImageAddImageTableViewCellController: DefaultTableViewCellController, UINa
   
   var delegate: ImageAddImageTableViewCellControllerDelegate?
   
-  override init() {
-    super.init()
-    imagePickerController.delegate = self
-  }
-  
   let imageImageViewTapGestureRecognizer = UITapGestureRecognizer()
   
   // MARK: TableViewCellController
@@ -33,15 +28,15 @@ class ImageAddImageTableViewCellController: DefaultTableViewCellController, UINa
   
   override func cell(at indexPath: IndexPath, in tableView: UITableView) -> UITableViewCell {
     let cell: ImageAddImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(ImageAddImageTableViewCell.self), for: indexPath) as! ImageAddImageTableViewCell
-    //cell.imageImageView.gestureRecognizers = []
     imageImageViewTapGestureRecognizer.addTarget(self, action: #selector(imageImageViewTapGestureRecognizerAction(tapGestureRecognizer:)))
+    cell.imageImageView.gestureRecognizers = []
     cell.imageImageView.addGestureRecognizer(imageImageViewTapGestureRecognizer)
-    cell.imageImageView.image = image
+    cell.set(image: image)
     return cell
   }
   
   override var estimatedHeight: CGFloat {
-    return 318
+    return 192
   }
   
   override var height: CGFloat {
@@ -50,12 +45,12 @@ class ImageAddImageTableViewCellController: DefaultTableViewCellController, UINa
   
   // MARK: UIImagePickerController
   
-  let imagePickerController = UIImagePickerController()
-  
   var image: UIImage?
   
   func imageImageViewTapGestureRecognizerAction(tapGestureRecognizer: UITapGestureRecognizer) {
-    imagePickerController.sourceType = .camera;
+    let imagePickerController = UIImagePickerController()
+    imagePickerController.delegate = self
+    imagePickerController.sourceType = .savedPhotosAlbum;
     imagePickerController.allowsEditing = false
     delegate?.present(imagePickerController: imagePickerController)
   }
