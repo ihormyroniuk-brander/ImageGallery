@@ -10,12 +10,19 @@ import UIKit
 
 class SignUpView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+  override func willMove(toWindow newWindow: UIWindow?) {
+    self.backgroundColor = UIColor.green
+  }
+  
+  override func willMove(toSuperview newSuperview: UIView?) {
+    
+  }
+  
+  func place(signUpTableView: UITableView) {
+    self.addSubview(signUpTableView)
+    signUpTableView.snp.makeConstraints { (make) -> Void in
+      make.left.top.right.bottom.equalTo(self)
     }
-    */
+  }
 
 }

@@ -10,11 +10,15 @@ import UIKit
 
 class LogInViewController: UIViewController {
 
+  // MARK: View
+  
   private let customView = LogInView()
   
   override func loadView() {
     self.view = customView
   }
+  
+  // MARK: Life Cycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -22,22 +26,22 @@ class LogInViewController: UIViewController {
     customView.logInButton.addTarget(self, action: #selector(logInButtonTouchUpInsideEventAction), for: .touchUpInside)
     customView.signUpButton.addTarget(self, action: #selector(signUpButtonTouchUpInsideEventAction), for: .touchUpInside)
   }
+  
+  // MARK: Actions
 
   func logInButtonTouchUpInsideEventAction(sender: UIButton!) {
-    print("logInButtonTouchUpInsideEventAction")
     let email = self.customView.emailTextField.text
     let password = self.customView.passwordTextField.text
-    APIUserLogIn.requestWith(email: email, password: password,
-                             success: { (user) in
-                   Application.user = user
-                              self.navigationController?.pushViewController(MainViewController(), animated: true)
+    APIUserLogIn.requestWith(email: email, password: password, success: { (user) in
+      Application.user = user
+      self.navigationController?.pushViewController(MainViewController(), animated: true)
     }) { (error) in
       
     }
   }
   
   func signUpButtonTouchUpInsideEventAction(sender: UIButton!) {
-    print("signUpButtonTouchUpInsideEventAction")
+    present(SignUpViewController(), animated: true, completion: nil)
   }
   
 }

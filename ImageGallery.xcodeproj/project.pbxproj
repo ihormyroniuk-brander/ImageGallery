@@ -59,6 +59,18 @@
 		C59B81E21F02A8E300D17168 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81E11F02A8E300D17168 /* LogInView.swift */; };
 		C5BA7CBF1F04DA4C004E619D /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CBE1F04DA4C004E619D /* SignUpView.swift */; };
 		C5BA7CC11F04DA5B004E619D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CC01F04DA5B004E619D /* SignUpViewController.swift */; };
+		C5BA7CC41F04E27E004E619D /* SignUpTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CC31F04E27E004E619D /* SignUpTableController.swift */; };
+		C5BA7CCA1F04E719004E619D /* SignUpAvatarTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CC91F04E719004E619D /* SignUpAvatarTableViewCellController.swift */; };
+		C5BA7CCC1F04E73D004E619D /* SignUpAvatarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CCB1F04E73D004E619D /* SignUpAvatarTableViewCell.swift */; };
+		C5BA7CD11F04ECB8004E619D /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CD01F04ECB8004E619D /* TextFieldTableViewCell.swift */; };
+		C5BA7CD31F04EDCA004E619D /* SignUpUsernameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CD21F04EDCA004E619D /* SignUpUsernameTableViewCell.swift */; };
+		C5BA7CD51F04EDF0004E619D /* SignUpUsernameTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CD41F04EDF0004E619D /* SignUpUsernameTableViewCellController.swift */; };
+		C5BA7CD71F04EF2F004E619D /* SignUpTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CD61F04EF2F004E619D /* SignUpTableView.swift */; };
+		C5BA7CD91F04F00D004E619D /* TextFieldTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CD81F04F00D004E619D /* TextFieldTableViewCellController.swift */; };
+		C5BA7CDB1F04F0A0004E619D /* SignUpEmailTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CDA1F04F0A0004E619D /* SignUpEmailTableViewCellController.swift */; };
+		C5BA7CDD1F04F0B8004E619D /* SignUpEmailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CDC1F04F0B8004E619D /* SignUpEmailTableViewCell.swift */; };
+		C5BA7CDF1F04F2D7004E619D /* SignUpPasswordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CDE1F04F2D7004E619D /* SignUpPasswordTableViewCell.swift */; };
+		C5BA7CE11F04F2F5004E619D /* SignUpPaswwordTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CE01F04F2F5004E619D /* SignUpPaswwordTableViewCellController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +129,18 @@
 		C59B81E11F02A8E300D17168 /* LogInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		C5BA7CBE1F04DA4C004E619D /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		C5BA7CC01F04DA5B004E619D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C5BA7CC31F04E27E004E619D /* SignUpTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableController.swift; sourceTree = "<group>"; };
+		C5BA7CC91F04E719004E619D /* SignUpAvatarTableViewCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpAvatarTableViewCellController.swift; sourceTree = "<group>"; };
+		C5BA7CCB1F04E73D004E619D /* SignUpAvatarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpAvatarTableViewCell.swift; sourceTree = "<group>"; };
+		C5BA7CD01F04ECB8004E619D /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		C5BA7CD21F04EDCA004E619D /* SignUpUsernameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpUsernameTableViewCell.swift; sourceTree = "<group>"; };
+		C5BA7CD41F04EDF0004E619D /* SignUpUsernameTableViewCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpUsernameTableViewCellController.swift; sourceTree = "<group>"; };
+		C5BA7CD61F04EF2F004E619D /* SignUpTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableView.swift; sourceTree = "<group>"; };
+		C5BA7CD81F04F00D004E619D /* TextFieldTableViewCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCellController.swift; sourceTree = "<group>"; };
+		C5BA7CDA1F04F0A0004E619D /* SignUpEmailTableViewCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpEmailTableViewCellController.swift; sourceTree = "<group>"; };
+		C5BA7CDC1F04F0B8004E619D /* SignUpEmailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpEmailTableViewCell.swift; sourceTree = "<group>"; };
+		C5BA7CDE1F04F2D7004E619D /* SignUpPasswordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPasswordTableViewCell.swift; sourceTree = "<group>"; };
+		C5BA7CE01F04F2F5004E619D /* SignUpPaswwordTableViewCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPaswwordTableViewCellController.swift; sourceTree = "<group>"; };
 		CC4007E840A9C41F8532C5BC /* Pods-ImageGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageGallery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageGallery/Pods-ImageGallery.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -203,6 +227,7 @@
 		C57BBDFF1F0128FA009FF893 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				C5BA7CCD1F04E91F004E619D /* Elements */,
 				C57BBE001F0129C5009FF893 /* Stories */,
 			);
 			path = PresentationLayer;
@@ -493,8 +518,75 @@
 		C5BA7CC21F04DDFF004E619D /* SignUpTableController */ = {
 			isa = PBXGroup;
 			children = (
+				C5BA7CC31F04E27E004E619D /* SignUpTableController.swift */,
+				C5BA7CD61F04EF2F004E619D /* SignUpTableView.swift */,
+				C5BA7CC51F04E4E4004E619D /* Avatar */,
+				C5BA7CC61F04E4F4004E619D /* Username */,
+				C5BA7CC71F04E503004E619D /* Email */,
+				C5BA7CC81F04E511004E619D /* Password */,
 			);
 			path = SignUpTableController;
+			sourceTree = "<group>";
+		};
+		C5BA7CC51F04E4E4004E619D /* Avatar */ = {
+			isa = PBXGroup;
+			children = (
+				C5BA7CC91F04E719004E619D /* SignUpAvatarTableViewCellController.swift */,
+				C5BA7CCB1F04E73D004E619D /* SignUpAvatarTableViewCell.swift */,
+			);
+			path = Avatar;
+			sourceTree = "<group>";
+		};
+		C5BA7CC61F04E4F4004E619D /* Username */ = {
+			isa = PBXGroup;
+			children = (
+				C5BA7CD41F04EDF0004E619D /* SignUpUsernameTableViewCellController.swift */,
+				C5BA7CD21F04EDCA004E619D /* SignUpUsernameTableViewCell.swift */,
+			);
+			path = Username;
+			sourceTree = "<group>";
+		};
+		C5BA7CC71F04E503004E619D /* Email */ = {
+			isa = PBXGroup;
+			children = (
+				C5BA7CDA1F04F0A0004E619D /* SignUpEmailTableViewCellController.swift */,
+				C5BA7CDC1F04F0B8004E619D /* SignUpEmailTableViewCell.swift */,
+			);
+			path = Email;
+			sourceTree = "<group>";
+		};
+		C5BA7CC81F04E511004E619D /* Password */ = {
+			isa = PBXGroup;
+			children = (
+				C5BA7CE01F04F2F5004E619D /* SignUpPaswwordTableViewCellController.swift */,
+				C5BA7CDE1F04F2D7004E619D /* SignUpPasswordTableViewCell.swift */,
+			);
+			path = Password;
+			sourceTree = "<group>";
+		};
+		C5BA7CCD1F04E91F004E619D /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				C5BA7CCE1F04E987004E619D /* TableViewCells */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		C5BA7CCE1F04E987004E619D /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				C5BA7CCF1F04EAAF004E619D /* TextFieldTableViewCell */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		C5BA7CCF1F04EAAF004E619D /* TextFieldTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C5BA7CD81F04F00D004E619D /* TextFieldTableViewCellController.swift */,
+				C5BA7CD01F04ECB8004E619D /* TextFieldTableViewCell.swift */,
+			);
+			path = TextFieldTableViewCell;
 			sourceTree = "<group>";
 		};
 		E03FAA19CEFF573272A946B9 /* Pods */ = {
@@ -633,6 +725,7 @@
 				C57BBE251F0142FE009FF893 /* SendButtonMainTableViewCellController.swift in Sources */,
 				C57BBE221F0138F8009FF893 /* AvatarMainTableViewCellController.swift in Sources */,
 				C59B81A01F023F8C00D17168 /* AllImagesCollectionViewController.swift in Sources */,
+				C5BA7CDF1F04F2D7004E619D /* SignUpPasswordTableViewCell.swift in Sources */,
 				C57BBDFB1F010DF0009FF893 /* APIUserLogIn.swift in Sources */,
 				C59B81C91F02844A00D17168 /* CoreData.swift in Sources */,
 				C57BBE0D1F012B55009FF893 /* DefaultTableViewCellController.swift in Sources */,
@@ -640,14 +733,20 @@
 				C57BBE101F012B55009FF893 /* DefaultTableViewSectionHeaderFooterViewController.swift in Sources */,
 				C57BBE141F012B55009FF893 /* TableViewSectionHeaderFooterViewController.swift in Sources */,
 				C59B81A81F02488400D17168 /* AddImageViewController.swift in Sources */,
+				C5BA7CCA1F04E719004E619D /* SignUpAvatarTableViewCellController.swift in Sources */,
 				C57BBE0F1F012B55009FF893 /* DefaultTableViewSectionController.swift in Sources */,
+				C5BA7CDB1F04F0A0004E619D /* SignUpEmailTableViewCellController.swift in Sources */,
 				C57BBDF91F0100A6009FF893 /* API.swift in Sources */,
 				C59B81A31F023FF000D17168 /* ImageAllImagesCollectionViewCell.swift in Sources */,
 				C57BBE1B1F012F22009FF893 /* MainTableViewController.swift in Sources */,
+				C5BA7CD31F04EDCA004E619D /* SignUpUsernameTableViewCell.swift in Sources */,
 				C59B81AD1F024A6700D17168 /* AddImageTableViewController.swift in Sources */,
+				C5BA7CD71F04EF2F004E619D /* SignUpTableView.swift in Sources */,
 				C59B819D1F023D8600D17168 /* AllImagesView.swift in Sources */,
 				C59B81BB1F026C8400D17168 /* GIFView.swift in Sources */,
+				C5BA7CE11F04F2F5004E619D /* SignUpPaswwordTableViewCellController.swift in Sources */,
 				C57BBE271F014326009FF893 /* SendButtonMainTableViewCell.swift in Sources */,
+				C5BA7CD11F04ECB8004E619D /* TextFieldTableViewCell.swift in Sources */,
 				C57BBE161F012B94009FF893 /* MainViewController.swift in Sources */,
 				C57BBE121F012B55009FF893 /* TableViewController.swift in Sources */,
 				C57BBDFD1F0120FB009FF893 /* APIUserSignUp.swift in Sources */,
@@ -656,7 +755,11 @@
 				C59B81B41F024F6500D17168 /* ImageAddImageTableViewCellController.swift in Sources */,
 				C57BBE1D1F012F56009FF893 /* MainTableView.swift in Sources */,
 				C57BBE0E1F012B55009FF893 /* DefaultTableViewController.swift in Sources */,
+				C5BA7CCC1F04E73D004E619D /* SignUpAvatarTableViewCell.swift in Sources */,
+				C5BA7CC41F04E27E004E619D /* SignUpTableController.swift in Sources */,
 				C57BBE2B1F014DEF009FF893 /* APIImagesAddImage.swift in Sources */,
+				C5BA7CDD1F04F0B8004E619D /* SignUpEmailTableViewCell.swift in Sources */,
+				C5BA7CD91F04F00D004E619D /* TextFieldTableViewCellController.swift in Sources */,
 				C57BBE291F014917009FF893 /* APIImagesAllImages.swift in Sources */,
 				C59B81CD1F0284D000D17168 /* FileSystem.swift in Sources */,
 				C59B81B21F024F4D00D17168 /* ImageAddImageTableViewCell.swift in Sources */,
@@ -672,6 +775,7 @@
 				C59B81E01F02A8C900D17168 /* LogInViewController.swift in Sources */,
 				C5BA7CBF1F04DA4C004E619D /* SignUpView.swift in Sources */,
 				C57BBE111F012B55009FF893 /* TableViewCellController.swift in Sources */,
+				C5BA7CD51F04EDF0004E619D /* SignUpUsernameTableViewCellController.swift in Sources */,
 				C5BA7CC11F04DA5B004E619D /* SignUpViewController.swift in Sources */,
 				C57BBE2D1F015833009FF893 /* APIImagesGenerateGIF.swift in Sources */,
 				C59B81A51F02403300D17168 /* ImageAllImagesCollectionViewCellController.swift in Sources */,
