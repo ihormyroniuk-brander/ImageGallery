@@ -13,7 +13,7 @@ import SwiftyJSON
 
 class APIImagesAddImage {
   
-  typealias successAPIImagesAddImageCompletionHandler = (_ smallImageURL: URL, _ bigImageURL: URL, _ address: String, _ weather: String?) -> Void
+  typealias successAPIImagesAddImageCompletionHandler = (_ image: IGImage) -> Void
   typealias errorAPIImagesAddImageCompletionHandler = (_ error: Error) -> Void
   
   private static let addImageEndpoint = "/image"
@@ -45,7 +45,9 @@ class APIImagesAddImage {
                                  description: String?,
                                  hashtag: String?,
                                  latitude: Float?,
-                                 longitude: Float?) {
+                                 longitude: Float?,
+                                 success: @escaping successAPIImagesAddImageCompletionHandler,
+                                 failure: @escaping errorAPIImagesAddImageCompletionHandler) {
     let headers = APIImagesAddImage.headersWith(token: token)
     let parameters = APIImagesAddImage.parametersWith(description: description, hashtag: hashtag, latitude: latitude, longitude: longitude)
     Alamofire.upload(multipartFormData: { (multipartFormData) in
@@ -71,9 +73,11 @@ class APIImagesAddImage {
                           let responseJSON = JSON(data: response.data!)
                           print(responseJSON)
                           if response.response?.statusCode == 201 {
-                            
+                            let image = APIImagesAddImage.imageFrom(responseJSON: responseJSON)
+                            success(image)
                           } else {
-                            
+                            let error = NSError()
+                            failure(error)
                           }
                         }
                         
@@ -81,7 +85,15 @@ class APIImagesAddImage {
                         //print encodingError.description
                       }
     })
-    
+  }
+  
+  private static func imageFrom(responseJSON: JSON) -> IGImage {
+    let image = IGImage()
+    image.smallImageURLString = responseJSON["smallImage"].stringValue
+    image.bigImageURLString = responseJSON["bigImage"].stringValue
+    image.address = responseJSON["parameters"]["address"].stringValue
+    image.weather = responseJSON["parameters"]["weather"].stringValue
+    return image
   }
   
 }

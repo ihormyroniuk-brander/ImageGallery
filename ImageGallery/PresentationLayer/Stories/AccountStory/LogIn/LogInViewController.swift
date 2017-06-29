@@ -27,6 +27,20 @@ class LogInViewController: UIViewController {
     customView.signUpButton.addTarget(self, action: #selector(signUpButtonTouchUpInsideEventAction), for: .touchUpInside)
   }
   
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    let email = "k@k.k"
+    let password = "k"
+    APIUserLogIn.requestWith(email: email, password: password, success: { (user) in
+      Application.user = user
+      self.navigationController?.pushViewController(MainViewController(), animated: true)
+    }) { (error) in
+      
+    }
+
+  }
+  
   // MARK: Actions
 
   func logInButtonTouchUpInsideEventAction(sender: UIButton!) {

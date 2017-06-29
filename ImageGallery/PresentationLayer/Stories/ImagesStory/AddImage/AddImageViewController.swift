@@ -31,17 +31,21 @@ class AddImageViewController: UIViewController {
     
     
     
-    let button1 = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(AddImageViewController.sayHello))
-    self.navigationItem.rightBarButtonItems  = [button1]
+    let button1 = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(AddImageViewController.addImageBarButtonItemAction))
+    self.navigationItem.rightBarButtonItem  = button1
   }
   
-  func sayHello(sender: UIBarButtonItem) {
-    APIImagesAddImage.requestWith(token: Application.user?.token,
-                                  image: self.addImageTableViewController.imageAddImageTableViewCellController.image!,
-                                  description: "123456789",
-                                  hashtag: "123456789",
-                                  latitude: 49.9935,
-                                  longitude: 36.2304)
+  // MARK: Actions
+  
+  func addImageBarButtonItemAction(sender: UIBarButtonItem) {
+    let image = UIImage(named: "panda")//self.addImageTableViewController.imageAddImageTableViewCellController.image
+    let description = self.addImageTableViewController.descriptionTableViewCellController.details
+    let hashtag = self.addImageTableViewController.hashtagTableViewCellController.hashtag
+    APIImagesAddImage.requestWith(token: Application.user?.token, image: image!, description: description, hashtag: hashtag, latitude: 49.9935, longitude: 36.2304, success: { (image) in
+      self.navigationController?.popViewController(animated: true)
+    }) { (error) in
+      
+    }
   }
 
 }

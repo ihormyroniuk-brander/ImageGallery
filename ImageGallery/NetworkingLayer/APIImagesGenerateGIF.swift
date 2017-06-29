@@ -32,6 +32,7 @@ class APIImagesGenerateGIF {
     let parameters = APIImagesGenerateGIF.parametersWith(weather: weather)
     Alamofire.request(URLString, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: headers).responseJSON { response in
       let responseJSON = JSON(data: response.data!)
+      print(responseJSON)
       if response.response?.statusCode == 200 {
         let GIFURL = APIImagesGenerateGIF.GIFURLFrom(responseJSON: responseJSON)
         success(GIFURL)

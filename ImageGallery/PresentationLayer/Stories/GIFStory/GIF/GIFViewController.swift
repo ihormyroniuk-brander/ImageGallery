@@ -19,7 +19,19 @@ class GIFViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    APIImagesGenerateGIF.requestWith(token: Application.user?.token, weather: "Clouds", success: { (URL) in
+      self.customView.setupGIFImageView(URL: URL)
+    }) { (error) in
+      
+    }
     
+    let imageImageViewTapGestureRecognizer = UITapGestureRecognizer()
+    imageImageViewTapGestureRecognizer.addTarget(self, action: #selector(imageImageViewTapGestureRecognizerAction(tapGestureRecognizer:)))
+    customView.addGestureRecognizer(imageImageViewTapGestureRecognizer)
+  }
+  
+  func imageImageViewTapGestureRecognizerAction(tapGestureRecognizer: UITapGestureRecognizer) {
+    dismiss(animated: false, completion: nil)
   }
 
 }

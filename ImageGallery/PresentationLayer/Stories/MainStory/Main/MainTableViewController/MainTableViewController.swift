@@ -28,6 +28,7 @@ class MainTableViewController: DefaultTableViewController, SendButtonMainTableVi
   
   func registerTableView() {
     AvatarMainTableViewCellController.register(in: (tableView)!)
+    MainEmailTextFieldTableViewCellController.register(in: (tableView)!)
     SendButtonMainTableViewCellController.register(in: (tableView)!)
   }
   
@@ -39,6 +40,10 @@ class MainTableViewController: DefaultTableViewController, SendButtonMainTableVi
     let avatarMainTableViewCellController = AvatarMainTableViewCellController()
     avatarMainTableViewCellController.avatarURL = URL(string: (Application.user?.avatarURLString)!)
     sectionController.cellsControllers.append(avatarMainTableViewCellController)
+    
+    let emailMainTableViewCellController = MainEmailTextFieldTableViewCellController()
+    emailMainTableViewCellController.email = (Application.user?.email)!
+    sectionController.cellsControllers.append(emailMainTableViewCellController)
     
     let sendButtonMainTableViewCellController = SendButtonMainTableViewCellController()
     sendButtonMainTableViewCellController.delegate = self

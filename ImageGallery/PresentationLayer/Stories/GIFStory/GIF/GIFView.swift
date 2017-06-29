@@ -16,7 +16,6 @@ class GIFView: UIView {
   override func willMove(toWindow newWindow: UIWindow?) {
     self.backgroundColor = UIColor.orange
     placeGIFImageView()
-    setupGIFImageView()
   }
   
   override func willMove(toSuperview newSuperview: UIView?) {
@@ -25,6 +24,7 @@ class GIFView: UIView {
 
   func placeGIFImageView() {
     self.addSubview(GIFImageView)
+    GIFImageView.contentMode = .scaleAspectFit
     GIFImageView.snp.makeConstraints { (make) -> Void in
       make.left.equalTo(44)
       make.right.equalTo(-44)
@@ -33,9 +33,9 @@ class GIFView: UIView {
     }
   }
   
-  func setupGIFImageView() {
+  func setupGIFImageView(URL: URL) {
     GIFImageView.contentMode = UIViewContentMode.scaleAspectFit
-    let gif = UIImage.gif(url: "http://api.doitserver.in.ua/upload/images/gif/95f711e43a451e7b86508df593a2f7f6.gif")
+    let gif = UIImage.gif(url: URL.absoluteString)
     OperationQueue.main.addOperation {
       self.GIFImageView.image = gif
     }

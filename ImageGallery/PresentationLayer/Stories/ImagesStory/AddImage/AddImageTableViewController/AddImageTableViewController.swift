@@ -29,9 +29,13 @@ class AddImageTableViewController: DefaultTableViewController, ImageAddImageTabl
   
   func registerTableView() {
     ImageAddImageTableViewCellController.register(in: (tableView)!)
+    AddImageDescriptionTableViewCellController.register(in: (tableView)!)
+    AddImageHashtagTableViewCellController.register(in: (tableView)!)
   }
   
   let imageAddImageTableViewCellController = ImageAddImageTableViewCellController()
+  let descriptionTableViewCellController = AddImageDescriptionTableViewCellController()
+  let hashtagTableViewCellController = AddImageHashtagTableViewCellController()
   
   func prepareTableViewDataSource() {
     sectionsControllers = []
@@ -40,6 +44,10 @@ class AddImageTableViewController: DefaultTableViewController, ImageAddImageTabl
     
     imageAddImageTableViewCellController.delegate = self
     sectionController.cellsControllers.append(imageAddImageTableViewCellController)
+    
+    sectionController.cellsControllers.append(descriptionTableViewCellController)
+    
+    sectionController.cellsControllers.append(hashtagTableViewCellController)
     
     sectionsControllers.append(sectionController)
   }
@@ -52,6 +60,10 @@ class AddImageTableViewController: DefaultTableViewController, ImageAddImageTabl
 
   func dismiss(imagePickerController: UIImagePickerController) {
     imagePickerController.dismiss(animated: true, completion: nil)
+  }
+  
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    self.tableView.endEditing(true)
   }
   
 }
