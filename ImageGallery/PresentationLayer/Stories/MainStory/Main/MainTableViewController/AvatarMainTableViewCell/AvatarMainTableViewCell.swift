@@ -26,6 +26,7 @@ class AvatarMainTableViewCell: UITableViewCell {
   
   private func setupAvatarImageView() {
     avatarImageView = UIImageView()
+    avatarImageView?.contentMode = .scaleAspectFit
     self.addSubview(avatarImageView!)
     avatarImageView?.snp.makeConstraints { (make) -> Void in
       make.width.equalTo(168)
