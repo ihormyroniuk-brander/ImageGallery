@@ -34,7 +34,7 @@
 		C57BBE271F014326009FF893 /* SendButtonMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BBE261F014326009FF893 /* SendButtonMainTableViewCell.swift */; };
 		C57BBE291F014917009FF893 /* APIImagesAllImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BBE281F014917009FF893 /* APIImagesAllImages.swift */; };
 		C57BBE2B1F014DEF009FF893 /* APIImagesAddImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BBE2A1F014DEF009FF893 /* APIImagesAddImage.swift */; };
-		C57BBE2D1F015833009FF893 /* APIImagesGenerateGIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BBE2C1F015833009FF893 /* APIImagesGenerateGIF.swift */; };
+		C57BBE2D1F015833009FF893 /* APIGIFsGenerateGIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BBE2C1F015833009FF893 /* APIGIFsGenerateGIF.swift */; };
 		C59B819B1F023D6800D17168 /* AllImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B819A1F023D6800D17168 /* AllImagesViewController.swift */; };
 		C59B819D1F023D8600D17168 /* AllImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B819C1F023D8600D17168 /* AllImagesView.swift */; };
 		C59B81A01F023F8C00D17168 /* AllImagesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B819F1F023F8C00D17168 /* AllImagesCollectionViewController.swift */; };
@@ -110,7 +110,7 @@
 		C57BBE261F014326009FF893 /* SendButtonMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendButtonMainTableViewCell.swift; sourceTree = "<group>"; };
 		C57BBE281F014917009FF893 /* APIImagesAllImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIImagesAllImages.swift; sourceTree = "<group>"; };
 		C57BBE2A1F014DEF009FF893 /* APIImagesAddImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIImagesAddImage.swift; sourceTree = "<group>"; };
-		C57BBE2C1F015833009FF893 /* APIImagesGenerateGIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIImagesGenerateGIF.swift; sourceTree = "<group>"; };
+		C57BBE2C1F015833009FF893 /* APIGIFsGenerateGIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIGIFsGenerateGIF.swift; sourceTree = "<group>"; };
 		C59B819A1F023D6800D17168 /* AllImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllImagesViewController.swift; sourceTree = "<group>"; };
 		C59B819C1F023D8600D17168 /* AllImagesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllImagesView.swift; sourceTree = "<group>"; };
 		C59B819F1F023F8C00D17168 /* AllImagesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllImagesCollectionViewController.swift; sourceTree = "<group>"; };
@@ -220,7 +220,7 @@
 				C57BBDFA1F010DF0009FF893 /* APIUserLogIn.swift */,
 				C57BBE281F014917009FF893 /* APIImagesAllImages.swift */,
 				C57BBE2A1F014DEF009FF893 /* APIImagesAddImage.swift */,
-				C57BBE2C1F015833009FF893 /* APIImagesGenerateGIF.swift */,
+				C57BBE2C1F015833009FF893 /* APIGIFsGenerateGIF.swift */,
 			);
 			path = NetworkingLayer;
 			sourceTree = "<group>";
@@ -283,14 +283,14 @@
 		C57BBE041F012B3C009FF893 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				C57BBE051F012B55009FF893 /* DefaultTableViewCellController.swift */,
-				C57BBE061F012B55009FF893 /* DefaultTableViewController.swift */,
-				C57BBE071F012B55009FF893 /* DefaultTableViewSectionController.swift */,
-				C57BBE081F012B55009FF893 /* DefaultTableViewSectionHeaderFooterViewController.swift */,
 				C57BBE091F012B55009FF893 /* TableViewCellController.swift */,
 				C57BBE0A1F012B55009FF893 /* TableViewController.swift */,
 				C57BBE0B1F012B55009FF893 /* TableViewSectionController.swift */,
 				C57BBE0C1F012B55009FF893 /* TableViewSectionHeaderFooterViewController.swift */,
+				C57BBE051F012B55009FF893 /* DefaultTableViewCellController.swift */,
+				C57BBE061F012B55009FF893 /* DefaultTableViewController.swift */,
+				C57BBE071F012B55009FF893 /* DefaultTableViewSectionController.swift */,
+				C57BBE081F012B55009FF893 /* DefaultTableViewSectionHeaderFooterViewController.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -785,7 +785,7 @@
 				C57BBE111F012B55009FF893 /* TableViewCellController.swift in Sources */,
 				C5BA7CD51F04EDF0004E619D /* SignUpUsernameTableViewCellController.swift in Sources */,
 				C5BA7CC11F04DA5B004E619D /* SignUpViewController.swift in Sources */,
-				C57BBE2D1F015833009FF893 /* APIImagesGenerateGIF.swift in Sources */,
+				C57BBE2D1F015833009FF893 /* APIGIFsGenerateGIF.swift in Sources */,
 				C59B81A51F02403300D17168 /* ImageAllImagesCollectionViewCellController.swift in Sources */,
 				C57BBE201F0132AB009FF893 /* AvatarMainTableViewCell.swift in Sources */,
 				C59B81B91F026C7400D17168 /* GIFViewController.swift in Sources */,

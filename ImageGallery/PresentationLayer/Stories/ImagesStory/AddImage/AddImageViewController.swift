@@ -38,7 +38,7 @@ class AddImageViewController: UIViewController {
   // MARK: Actions
   
   func addImageBarButtonItemAction(sender: UIBarButtonItem) {
-    let image = UIImage(named: "panda")//self.addImageTableViewController.imageAddImageTableViewCellController.image
+    let image = self.addImageTableViewController.imageAddImageTableViewCellController.image
     let description = self.addImageTableViewController.descriptionTableViewCellController.details
     let hashtag = self.addImageTableViewController.hashtagTableViewCellController.hashtag
     APIImagesAddImage.requestWith(token: Application.user?.token, image: image!, description: description, hashtag: hashtag, latitude: 49.9935, longitude: 36.2304, success: { (image) in

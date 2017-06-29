@@ -7,17 +7,16 @@
 //
 
 import Foundation
-import UIKit
 import Alamofire
 import SwiftyJSON
 
-class APIImagesGenerateGIF {
+class APIGIFsGenerateGIF {
   
   // MARK: Input
   
   private static let endpoint = "/gif"
   
-  private static let URLString: String = API.baseURL + APIImagesGenerateGIF.endpoint
+  private static let URLString: String = API.baseURL + APIGIFsGenerateGIF.endpoint
   
   private static func parametersWith(weather: String?) -> [String : Any] {
     let parameters: [String : Any] = [
@@ -31,11 +30,11 @@ class APIImagesGenerateGIF {
                                  success: successAPIImagesGenerateGIFCompletionHandler?,
                                  failure: errorAPIImagesGenerateGIFompletionHandler?) {
     let headers = API.headersWith(token: token)
-    let parameters = APIImagesGenerateGIF.parametersWith(weather: weather)
+    let parameters = self.parametersWith(weather: weather)
     Alamofire.request(URLString, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: headers).responseJSON { response in
       let responseJSON = JSON(data: response.data!)
       if response.response?.statusCode == 200 {
-        let GIFURL = APIImagesGenerateGIF.GIFURLFrom(responseJSON: responseJSON)
+        let GIFURL = self.GIFURLFrom(responseJSON: responseJSON)
         success?(GIFURL)
       } else {
         let error = NSError()
