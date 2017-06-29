@@ -10,7 +10,7 @@ import UIKit
 
 class SignUpAvatarTableViewCell: UITableViewCell {
 
-  var avatarImageView: UIImageView?
+  var avatarImageView = UIImageView()
   
   override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -24,8 +24,10 @@ class SignUpAvatarTableViewCell: UITableViewCell {
   
   private func setupAvatarImageView() {
     avatarImageView = UIImageView()
-    self.addSubview(avatarImageView!)
-    avatarImageView?.snp.makeConstraints { (make) -> Void in
+    avatarImageView.contentMode = UIViewContentMode.scaleAspectFit
+    avatarImageView.isUserInteractionEnabled = true
+    self.addSubview(avatarImageView)
+    avatarImageView.snp.makeConstraints { (make) -> Void in
       make.width.equalTo(168)
       make.height.equalTo(168)
       make.top.equalToSuperview().offset(100)
@@ -37,7 +39,7 @@ class SignUpAvatarTableViewCell: UITableViewCell {
   
   public func set(avatar: UIImage?) {
     if avatar != nil {
-      avatarImageView?.image = avatar
+      avatarImageView.image = avatar
     } else {
       
     }

@@ -39,7 +39,7 @@ class ImageAllImagesCollectionViewCell: UICollectionViewCell {
   private func placeImageImageView() {
     self.addSubview(imageImageView)
     imageImageView.snp.makeConstraints { (make) -> Void in
-      //make.height.equalTo(144)
+      make.height.equalTo(80)
       make.left.equalToSuperview().offset(0)
       make.top.equalToSuperview().offset(0)
       make.right.equalToSuperview().offset(0)
@@ -64,7 +64,6 @@ class ImageAllImagesCollectionViewCell: UICollectionViewCell {
   private func placeWeatherLabel() {
     self.addSubview(weatherLabel)
     weatherLabel.snp.makeConstraints { (make) -> Void in
-      make.height.equalTo(84)
       make.left.equalToSuperview().offset(0)
       make.top.equalTo(imageImageView.snp.bottom)
       make.right.equalToSuperview().offset(0)
@@ -87,7 +86,6 @@ class ImageAllImagesCollectionViewCell: UICollectionViewCell {
   private func placeAddressLabel() {
     self.addSubview(addressLabel)
     addressLabel.snp.makeConstraints { (make) -> Void in
-      //make.height.equalTo(144)
       make.left.equalToSuperview().offset(0)
       make.top.equalTo(weatherLabel.snp.bottom)
       make.right.equalToSuperview().offset(0)

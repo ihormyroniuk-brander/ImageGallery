@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpUsernameTableViewCellController: TextFieldTableViewCellController {
+class SignUpUsernameTableViewCellController: TextFieldTableViewCellController, UITextFieldDelegate {
 
   // MARK: Data
   
@@ -24,7 +24,12 @@ class SignUpUsernameTableViewCellController: TextFieldTableViewCellController {
   override func cell(at indexPath: IndexPath, in tableView: UITableView) -> UITableViewCell {
     let cell: SignUpUsernameTableViewCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(SignUpUsernameTableViewCell.self)) as! SignUpUsernameTableViewCell
     cell.set(username: username)
+    cell.textField.addTarget(self, action: #selector(SignUpUsernameTableViewCellController.textFieldDidChange), for: .editingChanged)
     return cell
+  }
+  
+  func textFieldDidChange(textField: UITextField) {
+    self.username = textField.text
   }
   
 }

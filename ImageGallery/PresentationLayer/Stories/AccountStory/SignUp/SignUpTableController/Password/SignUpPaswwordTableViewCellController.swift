@@ -24,7 +24,12 @@ class SignUpPasswordTableViewCellController: TextFieldTableViewCellController {
   override func cell(at indexPath: IndexPath, in tableView: UITableView) -> UITableViewCell {
     let cell: SignUpPasswordTableViewCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(SignUpPasswordTableViewCell.self)) as! SignUpPasswordTableViewCell
     cell.set(password: password)
+    cell.textField.addTarget(self, action: #selector(SignUpUsernameTableViewCellController.textFieldDidChange), for: .editingChanged)
     return cell
+  }
+  
+  func textFieldDidChange(textField: UITextField) {
+    self.password = textField.text
   }
   
 }

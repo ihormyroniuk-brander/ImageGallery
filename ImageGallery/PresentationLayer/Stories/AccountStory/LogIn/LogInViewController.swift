@@ -41,7 +41,8 @@ class LogInViewController: UIViewController {
   }
   
   func signUpButtonTouchUpInsideEventAction(sender: UIButton!) {
-    present(SignUpViewController(), animated: true, completion: nil)
+    let navigationController = UINavigationController(rootViewController: SignUpViewController())
+    present(navigationController, animated: true, completion: nil)
   }
   
 }

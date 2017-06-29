@@ -24,7 +24,12 @@ class SignUpEmailTableViewCellController: TextFieldTableViewCellController {
   override func cell(at indexPath: IndexPath, in tableView: UITableView) -> UITableViewCell {
     let cell: SignUpEmailTableViewCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(SignUpEmailTableViewCell.self)) as! SignUpEmailTableViewCell
     cell.set(email: email)
+    cell.textField.addTarget(self, action: #selector(SignUpUsernameTableViewCellController.textFieldDidChange), for: .editingChanged)
     return cell
+  }
+  
+  func textFieldDidChange(textField: UITextField) {
+    self.email = textField.text
   }
   
 }

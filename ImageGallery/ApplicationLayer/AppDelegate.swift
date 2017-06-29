@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     
-    let image = UIImage(named: "panda")!
+    /*let image = UIImage(named: "panda")!
     let username = "u"
     let email = "e@e.e"
     let password = "p"
@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
     }) { (error) in
       
-    }
+    }*/
     /*APIUserLogIn.requestWith(email: email,
                              password: password,
                              success: { (token, avatarURL, signUpDate) in

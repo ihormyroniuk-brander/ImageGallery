@@ -36,7 +36,7 @@ class AddImageViewController: UIViewController {
   }
   
   func sayHello(sender: UIBarButtonItem) {
-    APIImagesAddImage.requestWith(token: "1976b3c0a8b7941199b43a1456a20ef1",
+    APIImagesAddImage.requestWith(token: Application.user?.token,
                                   image: self.addImageTableViewController.imageAddImageTableViewCellController.image!,
                                   description: "123456789",
                                   hashtag: "123456789",

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpTableController: DefaultTableViewController {
+class SignUpTableController: DefaultTableViewController, SignUpAvatarTableViewCellControllerDelegate {
   
   // MARK: View
   
@@ -30,6 +30,11 @@ class SignUpTableController: DefaultTableViewController {
   
   // MARK: UITableView
   
+  var avatarTableViewCellController = SignUpAvatarTableViewCellController()
+  var usernameTableViewCellController = SignUpUsernameTableViewCellController()
+  var emailTableViewCellController = SignUpEmailTableViewCellController()
+  var passwordTableViewCellController = SignUpPasswordTableViewCellController()
+  
   func registerTableView() {
     SignUpAvatarTableViewCellController.register(in: (tableView)!)
     SignUpUsernameTableViewCellController.register(in: (tableView)!)
@@ -41,20 +46,27 @@ class SignUpTableController: DefaultTableViewController {
     sectionsControllers = []
     
     let sectionController = DefaultTableViewSectionController()
+
+    avatarTableViewCellController.delegate = self
+    sectionController.cellsControllers.append(avatarTableViewCellController)
     
-    let avatarMainTableViewCellController = SignUpAvatarTableViewCellController()
-    sectionController.cellsControllers.append(avatarMainTableViewCellController)
-    
-    let usernameTableViewCellController = SignUpUsernameTableViewCellController()
     sectionController.cellsControllers.append(usernameTableViewCellController)
     
-    let emailTableViewCellController = SignUpEmailTableViewCellController()
     sectionController.cellsControllers.append(emailTableViewCellController)
-    
-    let passwordTableViewCellController = SignUpPasswordTableViewCellController()
+
     sectionController.cellsControllers.append(passwordTableViewCellController)
     
     sectionsControllers.append(sectionController)
   }
 
+  // MARK: ImageAddImageTableViewCellControllerDelegate
+  
+  func present(imagePickerController: UIImagePickerController) {
+    self.present(imagePickerController, animated: true, completion: nil)
+  }
+  
+  func dismiss(imagePickerController: UIImagePickerController) {
+    imagePickerController.dismiss(animated: true, completion: nil)
+  }
+  
 }

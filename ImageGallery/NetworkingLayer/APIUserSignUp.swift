@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class APIUserSignUp {
   
@@ -50,6 +51,8 @@ class APIUserSignUp {
         })
         
         upload.responseJSON { response in
+          let responseJSON = JSON(data: response.data!)
+          print(responseJSON)
           if response.response?.statusCode == 201 {
             success()
           } else {

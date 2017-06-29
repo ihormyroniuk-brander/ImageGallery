@@ -8,11 +8,19 @@
 
 import UIKit
 
-class SignUpAvatarTableViewCellController: DefaultTableViewCellController {
+protocol SignUpAvatarTableViewCellControllerDelegate {
+  func present(imagePickerController: UIImagePickerController)
+  func dismiss(imagePickerController: UIImagePickerController)
+}
 
+class SignUpAvatarTableViewCellController: DefaultTableViewCellController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+  
+  var delegate: SignUpAvatarTableViewCellControllerDelegate?
   // MARK: Data
   
   public var avatar: UIImage?
+  
+  let avatarImageViewTapGestureRecognizer = UITapGestureRecognizer()
   
   // MARK: TableViewCellController
   
@@ -24,6 +32,9 @@ class SignUpAvatarTableViewCellController: DefaultTableViewCellController {
   override func cell(at indexPath: IndexPath, in tableView: UITableView) -> UITableViewCell {
     let cell: SignUpAvatarTableViewCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(SignUpAvatarTableViewCell.self)) as! SignUpAvatarTableViewCell
     cell.set(avatar: avatar)
+    avatarImageViewTapGestureRecognizer.addTarget(self, action: #selector(imageImageViewTapGestureRecognizerAction(tapGestureRecognizer:)))
+    cell.avatarImageView.gestureRecognizers = []
+    cell.avatarImageView.addGestureRecognizer(avatarImageViewTapGestureRecognizer)
     return cell
   }
   
@@ -33,6 +44,22 @@ class SignUpAvatarTableViewCellController: DefaultTableViewCellController {
   
   override var height: CGFloat {
     return UITableViewAutomaticDimension
+  }
+  
+  // MARK: UIImagePickerController
+  
+  func imageImageViewTapGestureRecognizerAction(tapGestureRecognizer: UITapGestureRecognizer) {
+    let imagePickerController = UIImagePickerController()
+    imagePickerController.delegate = self
+    imagePickerController.sourceType = .savedPhotosAlbum;
+    imagePickerController.allowsEditing = false
+    delegate?.present(imagePickerController: imagePickerController)
+  }
+  
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    avatar = info[UIImagePickerControllerOriginalImage] as? UIImage
+    (delegate as! UITableViewController).tableView.reloadData()
+    delegate?.dismiss(imagePickerController: picker)
   }
   
 }
