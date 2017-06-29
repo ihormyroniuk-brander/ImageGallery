@@ -8,7 +8,7 @@
 
 import Foundation
 
-class IGImage: NSObject {
+class Image: NSObject {
   var id: Int?
   var details: String?
   var hashtag: String?

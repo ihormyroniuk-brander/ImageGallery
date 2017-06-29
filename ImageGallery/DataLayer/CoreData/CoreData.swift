@@ -19,7 +19,6 @@ class CoreData: NSObject {
       fatalError("Error loading model from bundle")
     }
     
-    // The managed object model for the application. It is a fatal error for the application not to be able to find and load its model.
     guard let mom = NSManagedObjectModel(contentsOf: modelURL) else {
       fatalError("Error initializing mom from: \(modelURL)")
     }
@@ -29,7 +28,7 @@ class CoreData: NSObject {
     CoreData.mainManagedObjectContext?.persistentStoreCoordinator = psc
     
     do {
-      try psc.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: FileSystem.ImageGallerySQLite, options: nil)
+      try psc.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: FileSystem.imageGallerySQLiteFile, options: nil)
     } catch {
       fatalError("Error migrating store: \(error)")
     }

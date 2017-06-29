@@ -13,6 +13,8 @@ import SwiftyJSON
 
 class APIImagesGenerateGIF {
   
+  // MARK: Input
+  
   private static let endpoint = "/gif"
   
   private static let URLString: String = API.baseURL + APIImagesGenerateGIF.endpoint
@@ -26,27 +28,29 @@ class APIImagesGenerateGIF {
 
   public static func requestWith(token: String?,
                                  weather: String?,
-                                 success: @escaping successAPIImagesGenerateGIFCompletionHandler,
-                                 failure: @escaping errorAPIImagesGenerateGIFompletionHandler) {
+                                 success: successAPIImagesGenerateGIFCompletionHandler?,
+                                 failure: errorAPIImagesGenerateGIFompletionHandler?) {
     let headers = API.headersWith(token: token)
     let parameters = APIImagesGenerateGIF.parametersWith(weather: weather)
     Alamofire.request(URLString, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: headers).responseJSON { response in
       let responseJSON = JSON(data: response.data!)
-      print(responseJSON)
       if response.response?.statusCode == 200 {
         let GIFURL = APIImagesGenerateGIF.GIFURLFrom(responseJSON: responseJSON)
-        success(GIFURL)
+        success?(GIFURL)
       } else {
-        
+        let error = NSError()
+        failure?(error)
       }
     }
   }
   
-  typealias successAPIImagesGenerateGIFCompletionHandler = (_ GIFURL: URL) -> Void
-  typealias errorAPIImagesGenerateGIFompletionHandler = (_ error: Error) -> Void
+  // MARK: Output
   
   private static func GIFURLFrom(responseJSON: JSON) -> URL {
     return URL(string: responseJSON["gif"].stringValue)!
   }
+  
+  typealias successAPIImagesGenerateGIFCompletionHandler = (_ GIFURL: URL) -> Void
+  typealias errorAPIImagesGenerateGIFompletionHandler = (_ error: Error) -> Void
   
 }

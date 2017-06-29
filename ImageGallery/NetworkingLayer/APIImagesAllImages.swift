@@ -7,18 +7,18 @@
 //
 
 import Foundation
-import UIKit
 import Alamofire
 import SwiftyJSON
 
 class APIImagesAllImages {
   
-  typealias successAPIUserSignUpCompletionHandlerAPIUserLogIn = (_ images: [IGImage], _ GIFImages: [IGGIFImage]) -> Void
-  typealias errorAPIUserSignUpCompletionHandlerAPIUserLogIn = (_ error: Error) -> Void
+  // MARK: Input
   
   private static let allImagesEndpoint = "/all"
   
   private static let URLString: String = API.baseURL + APIImagesAllImages.allImagesEndpoint
+  
+  // MARK: Execution
   
   public static func requestWith(token: String?,
                                  success: successAPIUserSignUpCompletionHandlerAPIUserLogIn?,
@@ -30,23 +30,24 @@ class APIImagesAllImages {
         print(responseJSON)
         let images = APIImagesAllImages.imagesFrom(responseJSON: responseJSON)
         let GIFImages = APIImagesAllImages.GIFImagesFrom(responseJSON: responseJSON)
-        if let success = success {
-          success(images, GIFImages)
-        }
+        success?(images, GIFImages)
       } else {
-        
+        let error = NSError()
+        failure?(error)
       }
     }
   }
   
-  private static func imagesFrom(responseJSON: JSON) -> [IGImage] {
-    var images: [IGImage] = []
+  // MARK: Output
+  
+  private static func imagesFrom(responseJSON: JSON) -> [Image] {
+    var images: [Image] = []
     if responseJSON["images"] != JSON.null {
       guard let imagesJSONArray = responseJSON["images"].array else {
         return images
       }
       for imageJSON in imagesJSONArray {
-        let image = IGImage()
+        let image = Image()
         image.id = imageJSON["id"].int
         image.details = imageJSON["description"].string
         image.hashtag = imageJSON["hashtag"].string
@@ -62,21 +63,24 @@ class APIImagesAllImages {
     return images
   }
   
-  private static func GIFImagesFrom(responseJSON: JSON) -> [IGGIFImage] {
-    var GIFImages: [IGGIFImage] = []
+  private static func GIFImagesFrom(responseJSON: JSON) -> [GIFImage] {
+    var GIFImages: [GIFImage] = []
     if responseJSON["gif"] != JSON.null {
       guard let imagesJSONArray = responseJSON["gif"].array else {
         return GIFImages
       }
       for imageJSON in imagesJSONArray {
-        let GIFImage = IGGIFImage()
-        GIFImage.id = imageJSON["id"].int
-        GIFImage.weather = imageJSON["weather"].string
-        GIFImage.URLString = imageJSON["path"].string
-        GIFImages.append(GIFImage)
+        let gifImage = GIFImage()
+        gifImage.id = imageJSON["id"].int
+        gifImage.weather = imageJSON["weather"].string
+        gifImage.URLString = imageJSON["path"].string
+        GIFImages.append(gifImage)
       }
     }
     return GIFImages
   }
+  
+  typealias successAPIUserSignUpCompletionHandlerAPIUserLogIn = (_ images: [Image], _ GIFImages: [GIFImage]) -> Void
+  typealias errorAPIUserSignUpCompletionHandlerAPIUserLogIn = (_ error: Error) -> Void
   
 }

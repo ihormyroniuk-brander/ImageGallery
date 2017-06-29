@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IGGIFImage: NSObject {
+class GIFImage: NSObject {
   var id: Int?
   var weather: String?
   var URLString: String?

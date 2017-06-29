@@ -12,7 +12,7 @@ private let reuseIdentifier = "Cell"
 
 class AllImagesCollectionViewController: UICollectionViewController {
 
-  var images: [IGImage] = []
+  var images: [Image] = []
   
     override func viewDidLoad() {
         super.viewDidLoad()

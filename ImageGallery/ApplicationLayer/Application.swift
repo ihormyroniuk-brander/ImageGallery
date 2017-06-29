@@ -8,15 +8,21 @@
 
 import Foundation
 
-class Application: NSObject {
+class Application {
   
-  var user: User?
+  // MARK: Singleton
   
   static let instance = Application()
+  
+  // MARK: Setup
   
   static func launchSetup() {
     CoreData.setup()
   }
+  
+  // MARK: User
+  
+  var user: User?
   
   static var user: User? {
     get {

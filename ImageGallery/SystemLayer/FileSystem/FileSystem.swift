@@ -8,15 +8,23 @@
 
 import Foundation
 
-import UIKit
-
 class FileSystem: NSObject {
   
-  static var ImageGallerySQLite: URL {
+  // MARK: Documents Directory
+  
+  private static var documentsDirectory: URL {
     let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-    let docURL = urls[urls.endIndex-1]
-    let storeURL = docURL.appendingPathComponent("ImageGallery.sqlite")
-    return storeURL
+    return urls[urls.endIndex-1]
+  }
+  
+  // MARK: ImageGallery.sqlite
+  
+  private static let ImageGallerySQLiteFileName = "ImageGallery.sqlite"
+  
+  static var imageGallerySQLiteFile: URL {
+    let documentsDirectory = self.documentsDirectory
+    let imageGallerySQLiteFile = documentsDirectory.appendingPathComponent(self.ImageGallerySQLiteFileName)
+    return imageGallerySQLiteFile
   }
   
 }
