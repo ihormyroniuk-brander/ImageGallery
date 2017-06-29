@@ -10,6 +10,8 @@ import Foundation
 
 class Application: NSObject {
   
+  var user: User?
+  
   static let instance = Application()
   
   static func launchSetup() {
@@ -17,7 +19,11 @@ class Application: NSObject {
   }
   
   static var user: User? {
-    return nil
+    get {
+      return self.instance.user
+    } set {
+      self.instance.user = newValue
+    }
   }
   
 }

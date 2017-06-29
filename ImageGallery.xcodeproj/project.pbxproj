@@ -55,6 +55,10 @@
 		C59B81D21F02881A00D17168 /* IGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81D11F02881A00D17168 /* IGImage.swift */; };
 		C59B81D41F02882F00D17168 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81D31F02882F00D17168 /* User.swift */; };
 		C59B81D61F02883C00D17168 /* IGGIFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81D51F02883C00D17168 /* IGGIFImage.swift */; };
+		C59B81E01F02A8C900D17168 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81DF1F02A8C900D17168 /* LogInViewController.swift */; };
+		C59B81E21F02A8E300D17168 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81E11F02A8E300D17168 /* LogInView.swift */; };
+		C5BA7CBF1F04DA4C004E619D /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CBE1F04DA4C004E619D /* SignUpView.swift */; };
+		C5BA7CC11F04DA5B004E619D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CC01F04DA5B004E619D /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +113,10 @@
 		C59B81D11F02881A00D17168 /* IGImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGImage.swift; sourceTree = "<group>"; };
 		C59B81D31F02882F00D17168 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C59B81D51F02883C00D17168 /* IGGIFImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGGIFImage.swift; sourceTree = "<group>"; };
+		C59B81DF1F02A8C900D17168 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		C59B81E11F02A8E300D17168 /* LogInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		C5BA7CBE1F04DA4C004E619D /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		C5BA7CC01F04DA5B004E619D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CC4007E840A9C41F8532C5BC /* Pods-ImageGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageGallery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageGallery/Pods-ImageGallery.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +161,7 @@
 		C57BBDE41F00FC88009FF893 /* ImageGallery */ = {
 			isa = PBXGroup;
 			children = (
+				C59B81DB1F02A68900D17168 /* Modules */,
 				C57BBDFE1F01255F009FF893 /* ApplicationLayer */,
 				C59B81CA1F02848900D17168 /* SystemLayer */,
 				C59B81BF1F0280CE00D17168 /* DataLayer */,
@@ -202,6 +211,7 @@
 		C57BBE001F0129C5009FF893 /* Stories */ = {
 			isa = PBXGroup;
 			children = (
+				C59B81DA1F02A61700D17168 /* AccountStory */,
 				C57BBE011F012A38009FF893 /* MainStory */,
 				C59B81981F0239B100D17168 /* ImagesStory */,
 				C59B81B61F026BBC00D17168 /* GIFStory */,
@@ -429,6 +439,64 @@
 			path = Objects;
 			sourceTree = "<group>";
 		};
+		C59B81DA1F02A61700D17168 /* AccountStory */ = {
+			isa = PBXGroup;
+			children = (
+				C59B81DE1F02A79F00D17168 /* LogIn */,
+				C5BA7CBD1F04DA03004E619D /* SignUp */,
+			);
+			path = AccountStory;
+			sourceTree = "<group>";
+		};
+		C59B81DB1F02A68900D17168 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C59B81DC1F02A6B400D17168 /* AccountModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C59B81DC1F02A6B400D17168 /* AccountModule */ = {
+			isa = PBXGroup;
+			children = (
+				C59B81DD1F02A6CB00D17168 /* Assembly */,
+			);
+			path = AccountModule;
+			sourceTree = "<group>";
+		};
+		C59B81DD1F02A6CB00D17168 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		C59B81DE1F02A79F00D17168 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				C59B81DF1F02A8C900D17168 /* LogInViewController.swift */,
+				C59B81E11F02A8E300D17168 /* LogInView.swift */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		C5BA7CBD1F04DA03004E619D /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				C5BA7CC01F04DA5B004E619D /* SignUpViewController.swift */,
+				C5BA7CBE1F04DA4C004E619D /* SignUpView.swift */,
+				C5BA7CC21F04DDFF004E619D /* SignUpTableController */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		C5BA7CC21F04DDFF004E619D /* SignUpTableController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignUpTableController;
+			sourceTree = "<group>";
+		};
 		E03FAA19CEFF573272A946B9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -594,13 +662,17 @@
 				C59B81B21F024F4D00D17168 /* ImageAddImageTableViewCell.swift in Sources */,
 				C57BBDE61F00FC88009FF893 /* AppDelegate.swift in Sources */,
 				C59B819B1F023D6800D17168 /* AllImagesViewController.swift in Sources */,
+				C59B81E21F02A8E300D17168 /* LogInView.swift in Sources */,
 				C59B81D41F02882F00D17168 /* User.swift in Sources */,
 				C59B81C71F0281EF00D17168 /* ImageGallery.xcdatamodeld in Sources */,
 				C57BBE131F012B55009FF893 /* TableViewSectionController.swift in Sources */,
 				C59B81AA1F0248C500D17168 /* AddImageView.swift in Sources */,
 				C57BBE181F012BA3009FF893 /* MainView.swift in Sources */,
 				C59B81CF1F0285AA00D17168 /* Application.swift in Sources */,
+				C59B81E01F02A8C900D17168 /* LogInViewController.swift in Sources */,
+				C5BA7CBF1F04DA4C004E619D /* SignUpView.swift in Sources */,
 				C57BBE111F012B55009FF893 /* TableViewCellController.swift in Sources */,
+				C5BA7CC11F04DA5B004E619D /* SignUpViewController.swift in Sources */,
 				C57BBE2D1F015833009FF893 /* APIImagesGenerateGIF.swift in Sources */,
 				C59B81A51F02403300D17168 /* ImageAllImagesCollectionViewCellController.swift in Sources */,
 				C57BBE201F0132AB009FF893 /* AvatarMainTableViewCell.swift in Sources */,

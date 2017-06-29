@@ -64,7 +64,7 @@ class ImageAllImagesCollectionViewCell: UICollectionViewCell {
   private func placeWeatherLabel() {
     self.addSubview(weatherLabel)
     weatherLabel.snp.makeConstraints { (make) -> Void in
-      //make.height.equalTo(144)
+      make.height.equalTo(84)
       make.left.equalToSuperview().offset(0)
       make.top.equalTo(imageImageView.snp.bottom)
       make.right.equalToSuperview().offset(0)

@@ -37,7 +37,7 @@ class MainTableViewController: DefaultTableViewController, SendButtonMainTableVi
     let sectionController = DefaultTableViewSectionController()
     
     let avatarMainTableViewCellController = AvatarMainTableViewCellController()
-    avatarMainTableViewCellController.avatarURL = URL(string: "http://api.doitserver.in.ua/upload/avatars/216ca1852b9fbfcb1cf0db216d11a9ed.png")
+    avatarMainTableViewCellController.avatarURL = URL(string: (Application.user?.avatarURLString)!)
     sectionController.cellsControllers.append(avatarMainTableViewCellController)
     
     let sendButtonMainTableViewCellController = SendButtonMainTableViewCellController()

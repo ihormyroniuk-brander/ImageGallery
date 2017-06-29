@@ -19,22 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     
-    /*let image = UIImage(named: "panda")!
-    let username = "username10"
-    let email = "email10@gmail.com"
-    let password = "password1"*/
-    /*APIUserSignUp.requestWith(username: username, email: email, password: password, avatar: image, success: {
-      APIUserLogIn.requestWith(email: email,
-                               password: password,
-                               success: { (token, avatarURL, signUpDate) in
-                             print(avatarURL)
-                                print(token)
-      }) { (error) in
-        
-      }
+    let image = UIImage(named: "panda")!
+    let username = "u"
+    let email = "e@e.e"
+    let password = "p"
+    APIUserSignUp.requestWith(username: username, email: email, password: password, avatar: image, success: {
+      
     }) { (error) in
       
-    }*/
+    }
     /*APIUserLogIn.requestWith(email: email,
                              password: password,
                              success: { (token, avatarURL, signUpDate) in
@@ -81,7 +74,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     Application.launchSetup()
     
-    let navigationController = UINavigationController(rootViewController: MainViewController())
+    let navigationController = UINavigationController(rootViewController: LogInViewController())
     self.window?.rootViewController = navigationController
     self.window?.makeKeyAndVisible()
     
