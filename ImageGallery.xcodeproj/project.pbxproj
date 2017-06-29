@@ -77,6 +77,7 @@
 		C5BA7CEA1F050617004E619D /* AddImageHashtagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CE91F050617004E619D /* AddImageHashtagTableViewCell.swift */; };
 		C5BA7CED1F050AF0004E619D /* MainEmailTextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CEC1F050AF0004E619D /* MainEmailTextFieldTableViewCell.swift */; };
 		C5BA7CEF1F050AFF004E619D /* MainEmailTextFieldTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CEE1F050AFF004E619D /* MainEmailTextFieldTableViewCellController.swift */; };
+		C5BA7CFB1F053810004E619D /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CFA1F053810004E619D /* SetupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -153,6 +154,7 @@
 		C5BA7CE91F050617004E619D /* AddImageHashtagTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddImageHashtagTableViewCell.swift; sourceTree = "<group>"; };
 		C5BA7CEC1F050AF0004E619D /* MainEmailTextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainEmailTextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		C5BA7CEE1F050AFF004E619D /* MainEmailTextFieldTableViewCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainEmailTextFieldTableViewCellController.swift; sourceTree = "<group>"; };
+		C5BA7CFA1F053810004E619D /* SetupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
 		CC4007E840A9C41F8532C5BC /* Pods-ImageGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageGallery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageGallery/Pods-ImageGallery.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -551,6 +553,7 @@
 		C5BA7CCD1F04E91F004E619D /* Elements */ = {
 			isa = PBXGroup;
 			children = (
+				C5BA7CF91F05378B004E619D /* Views */,
 				C5BA7CCE1F04E987004E619D /* TableViewCells */,
 			);
 			path = Elements;
@@ -589,6 +592,14 @@
 				C5BA7CEC1F050AF0004E619D /* MainEmailTextFieldTableViewCell.swift */,
 			);
 			path = Email;
+			sourceTree = "<group>";
+		};
+		C5BA7CF91F05378B004E619D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C5BA7CFA1F053810004E619D /* SetupView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E03FAA19CEFF573272A946B9 /* Pods */ = {
@@ -760,6 +771,7 @@
 				C59B81D21F02881A00D17168 /* Image.swift in Sources */,
 				C59B81B41F024F6500D17168 /* ImageAddImageTableViewCellController.swift in Sources */,
 				C57BBE1D1F012F56009FF893 /* MainTableView.swift in Sources */,
+				C5BA7CFB1F053810004E619D /* SetupView.swift in Sources */,
 				C57BBE0E1F012B55009FF893 /* DefaultTableViewController.swift in Sources */,
 				C5BA7CE61F0505EF004E619D /* AddImageHashtagTableViewCellController.swift in Sources */,
 				C5BA7CED1F050AF0004E619D /* MainEmailTextFieldTableViewCell.swift in Sources */,

@@ -30,6 +30,12 @@ class AllImagesViewController: UIViewController {
     self.navigationItem.rightBarButtonItems  = [button1, button2]
   }
 
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    allImagesCollectionViewController.viewWillAppear(animated)
+  }
+  
   
   func setupView() {
     self.addChildViewController(allImagesCollectionViewController)

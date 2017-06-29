@@ -14,6 +14,7 @@ class TextFieldTableViewCell: UITableViewCell {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     self.selectionStyle = .none
     self.backgroundColor = UIColor.white
+    initializeLabel()
     initializeTextField()
   }
   
@@ -21,6 +22,29 @@ class TextFieldTableViewCell: UITableViewCell {
     super.init(coder: aDecoder)
   }
 
+  // MARK: Label
+  
+  var label: UILabel = UILabel()
+  
+  private func initializeLabel() {
+    setupLabel()
+    placeLabel()
+  }
+  
+  private func setupLabel() {
+    label.font = UIFont.systemFont(ofSize: 10);
+    label.textColor = UIColor.black
+  }
+  
+  private func placeLabel() {
+    self.addSubview(label)
+    label.snp.makeConstraints { (make) -> Void in
+      make.left.equalTo(32)
+      make.right.equalTo(-32)
+      make.top.equalTo(8)
+    }
+  }
+  
   // MARK: TextField
   
   var textField: UITextField = UITextField()
@@ -31,10 +55,13 @@ class TextFieldTableViewCell: UITableViewCell {
   }
   
   private func setupTextField() {
-    textField.backgroundColor = UIColor.red
+    textField.backgroundColor = UIColor.lightGray
     textField.keyboardType = .emailAddress
     textField.autocapitalizationType = .none
     textField.autocorrectionType = .no
+    textField.layer.borderColor = UIColor.darkGray.cgColor
+    textField.layer.borderWidth = 1
+    textField.layer.cornerRadius = 8
   }
   
   private func placeTextField() {
@@ -42,9 +69,9 @@ class TextFieldTableViewCell: UITableViewCell {
     textField.snp.makeConstraints { (make) -> Void in
       make.left.equalTo(32)
       make.right.equalTo(-32)
-      make.top.equalTo(12)
+      make.top.equalTo(label.snp.bottom)
       make.height.equalTo(44)
-      make.bottom.equalTo(-12)
+      make.bottom.equalTo(-8)
     }
   }
   

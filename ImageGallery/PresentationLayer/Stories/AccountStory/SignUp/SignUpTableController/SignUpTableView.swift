@@ -10,10 +10,10 @@ import UIKit
 
 class SignUpTableView: UITableView {
 
+  // MARK: Initializars
+  
   init() {
     super.init(frame: CGRect.zero, style: UITableViewStyle.plain)
-    
-    self.backgroundColor = UIColor.white
     self.separatorStyle = UITableViewCellSeparatorStyle.none
   }
   

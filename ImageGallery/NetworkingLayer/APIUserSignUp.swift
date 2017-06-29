@@ -28,7 +28,7 @@ class APIUserSignUp {
   
   // MARK: Execution
   
-  public static func requestWith(username: String,
+  public static func requestWith(username: String?,
                                  email: String?,
                                  password: String?,
                                  avatar: UIImage?,
@@ -48,7 +48,7 @@ class APIUserSignUp {
           if response.response?.statusCode == 201 {
             success?()
           } else {
-            let error = NSError()
+            let error = NSError(domain: "", code: 1, userInfo: [:])
             failure?(error)
           }
         }

@@ -12,10 +12,11 @@ class SignUpTableController: DefaultTableViewController, SignUpAvatarTableViewCe
   
   // MARK: View
   
+  private let customTableView = SignUpTableView()
+  
   override func loadView() {
     super.loadView()
-    
-    self.tableView = SignUpTableView()
+    self.tableView = customTableView
   }
   
   // MARK: Life Cycle
@@ -28,12 +29,14 @@ class SignUpTableController: DefaultTableViewController, SignUpAvatarTableViewCe
     self.tableView.reloadData()
   }
   
-  // MARK: UITableView
+  // MARK: Elements
   
   var avatarTableViewCellController = SignUpAvatarTableViewCellController()
   var usernameTableViewCellController = SignUpUsernameTableViewCellController()
   var emailTableViewCellController = SignUpEmailTableViewCellController()
   var passwordTableViewCellController = SignUpPasswordTableViewCellController()
+  
+  // MARK: UITableView DataSource Preparation
   
   func registerTableView() {
     SignUpAvatarTableViewCellController.register(in: (tableView)!)
@@ -44,19 +47,19 @@ class SignUpTableController: DefaultTableViewController, SignUpAvatarTableViewCe
   
   func prepareTableViewDataSource() {
     sectionsControllers = []
-    
     let sectionController = DefaultTableViewSectionController()
-
     avatarTableViewCellController.delegate = self
     sectionController.cellsControllers.append(avatarTableViewCellController)
-    
     sectionController.cellsControllers.append(usernameTableViewCellController)
-    
     sectionController.cellsControllers.append(emailTableViewCellController)
-
     sectionController.cellsControllers.append(passwordTableViewCellController)
-    
     sectionsControllers.append(sectionController)
+  }
+  
+  // MARK: UITableView Delegate
+  
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.endEditing(true)
   }
 
   // MARK: ImageAddImageTableViewCellControllerDelegate

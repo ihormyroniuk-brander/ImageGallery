@@ -26,12 +26,15 @@ class SignUpAvatarTableViewCell: UITableViewCell {
     avatarImageView = UIImageView()
     avatarImageView.contentMode = UIViewContentMode.scaleAspectFit
     avatarImageView.isUserInteractionEnabled = true
+    avatarImageView.layer.cornerRadius = 168 / 2;
+    avatarImageView.clipsToBounds = true;
     self.addSubview(avatarImageView)
+    
     avatarImageView.snp.makeConstraints { (make) -> Void in
       make.width.equalTo(168)
       make.height.equalTo(168)
-      make.top.equalToSuperview().offset(100)
-      make.bottom.equalToSuperview().offset(-50)
+      make.top.equalToSuperview().offset(16)
+      make.bottom.equalToSuperview().offset(-16)
       make.centerX.equalToSuperview()
     }
     

@@ -19,10 +19,21 @@ class SignUpEmailTableViewCell: TextFieldTableViewCell {
     self.selectionStyle = .none
     self.backgroundColor = UIColor.white
     initializeTextField()
+    initializeLabel()
   }
   
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
+  }
+  
+  // MARK: Label
+  
+  private func initializeLabel() {
+    setupLabel()
+  }
+  
+  private func setupLabel() {
+    label.text = "Email"
   }
   
   // MARK: TextField
@@ -32,7 +43,6 @@ class SignUpEmailTableViewCell: TextFieldTableViewCell {
   }
   
   private func setupTextField() {
-    textField.backgroundColor = UIColor.red
     textField.keyboardType = .emailAddress
     textField.autocapitalizationType = .none
   }

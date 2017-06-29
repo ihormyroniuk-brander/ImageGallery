@@ -8,21 +8,67 @@
 
 import UIKit
 
-class SignUpView: UIView {
+class SignUpView: SetupView {
+  
+  // MARK: Life Cycle
 
   override func willMove(toWindow newWindow: UIWindow?) {
     self.backgroundColor = UIColor.green
   }
+
+  // MARK: Elements
   
-  override func willMove(toSuperview newSuperview: UIView?) {
+  var closeBarButtonItem = UIBarButtonItem()
+  var signUpBarButtonItem = UIBarButtonItem()
+  
+  // MARK: Setup
+  
+  override func setup() {
+    setupCloseBarButtonItem()
+    placeCloseBarButtonItem()
+    setupSignUpBarButtonItem()
+    placeSignUpBarButtonItem()
+    setText()
+  }
+  
+  // MARK: Close BarButtonItem
+  
+  func setupCloseBarButtonItem() {
+    closeBarButtonItem.style = .plain
+  }
+  
+  func placeCloseBarButtonItem() {
+    navigationItem?.leftBarButtonItem = closeBarButtonItem
+  }
+  
+  // MARK: SignUp BarButtonItem
+  
+  func setupSignUpBarButtonItem() {
+    signUpBarButtonItem.style = .plain
+  }
+  
+  func placeSignUpBarButtonItem() {
+    navigationItem?.rightBarButtonItem = signUpBarButtonItem
+  }
+  
+  // MARK: SignUp TableView
+  
+  func setup(signUpTableView: SignUpTableView) {
     
   }
   
-  func place(signUpTableView: UITableView) {
+  func place(signUpTableView: SignUpTableView) {
     self.addSubview(signUpTableView)
     signUpTableView.snp.makeConstraints { (make) -> Void in
       make.left.top.right.bottom.equalTo(self)
     }
   }
-
+  
+  // MARK: Text
+  
+  func setText() {
+    closeBarButtonItem.title = "Close"
+    signUpBarButtonItem.title = "Sign Up"
+  }
+  
 }

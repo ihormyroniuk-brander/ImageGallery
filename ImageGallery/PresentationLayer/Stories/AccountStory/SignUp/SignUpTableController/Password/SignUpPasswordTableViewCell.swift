@@ -15,10 +15,21 @@ class SignUpPasswordTableViewCell: TextFieldTableViewCell {
     self.selectionStyle = .none
     self.backgroundColor = UIColor.white
     initializeTextField()
+    initializeLabel()
   }
   
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
+  }
+  
+  // MARK: Label
+  
+  private func initializeLabel() {
+    setupLabel()
+  }
+  
+  private func setupLabel() {
+    label.text = "Password"
   }
   
   // MARK: TextField
@@ -28,7 +39,6 @@ class SignUpPasswordTableViewCell: TextFieldTableViewCell {
   }
   
   private func setupTextField() {
-    textField.backgroundColor = UIColor.red
     textField.keyboardType = .default
     textField.autocapitalizationType = .none
     textField.isSecureTextEntry = true

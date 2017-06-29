@@ -16,9 +16,10 @@ protocol SignUpAvatarTableViewCellControllerDelegate {
 class SignUpAvatarTableViewCellController: DefaultTableViewCellController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
   
   var delegate: SignUpAvatarTableViewCellControllerDelegate?
+  
   // MARK: Data
   
-  public var avatar: UIImage?
+  public var avatar: UIImage? = UIImage(named: "avatar_placeholder")
   
   let avatarImageViewTapGestureRecognizer = UITapGestureRecognizer()
   
@@ -31,7 +32,7 @@ class SignUpAvatarTableViewCellController: DefaultTableViewCellController, UINav
   
   override func cell(at indexPath: IndexPath, in tableView: UITableView) -> UITableViewCell {
     let cell: SignUpAvatarTableViewCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(SignUpAvatarTableViewCell.self)) as! SignUpAvatarTableViewCell
-    cell.set(avatar: avatar)
+    cell.set(avatar: avatar ?? UIImage(named: "avatar_placeholder"))
     avatarImageViewTapGestureRecognizer.addTarget(self, action: #selector(imageImageViewTapGestureRecognizerAction(tapGestureRecognizer:)))
     cell.avatarImageView.gestureRecognizers = []
     cell.avatarImageView.addGestureRecognizer(avatarImageViewTapGestureRecognizer)
