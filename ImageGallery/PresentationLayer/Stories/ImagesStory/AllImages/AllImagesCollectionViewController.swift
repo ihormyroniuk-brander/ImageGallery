@@ -23,7 +23,7 @@ class AllImagesCollectionViewController: UICollectionViewController {
 
         // Register cell classes
         self.collectionView!.register(ImageAllImagesCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        self.collectionView?.backgroundColor = UIColor.gray
+        self.collectionView?.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
       self.collectionView?.isScrollEnabled = true
       self.collectionView?.bounces = true

@@ -39,7 +39,6 @@
 		C59B819D1F023D8600D17168 /* AllImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B819C1F023D8600D17168 /* AllImagesView.swift */; };
 		C59B81A01F023F8C00D17168 /* AllImagesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B819F1F023F8C00D17168 /* AllImagesCollectionViewController.swift */; };
 		C59B81A31F023FF000D17168 /* ImageAllImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81A21F023FF000D17168 /* ImageAllImagesCollectionViewCell.swift */; };
-		C59B81A51F02403300D17168 /* ImageAllImagesCollectionViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81A41F02403300D17168 /* ImageAllImagesCollectionViewCellController.swift */; };
 		C59B81A81F02488400D17168 /* AddImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81A71F02488400D17168 /* AddImageViewController.swift */; };
 		C59B81AA1F0248C500D17168 /* AddImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81A91F0248C500D17168 /* AddImageView.swift */; };
 		C59B81AD1F024A6700D17168 /* AddImageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81AC1F024A6700D17168 /* AddImageTableViewController.swift */; };
@@ -119,7 +118,6 @@
 		C59B819C1F023D8600D17168 /* AllImagesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllImagesView.swift; sourceTree = "<group>"; };
 		C59B819F1F023F8C00D17168 /* AllImagesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllImagesCollectionViewController.swift; sourceTree = "<group>"; };
 		C59B81A21F023FF000D17168 /* ImageAllImagesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAllImagesCollectionViewCell.swift; sourceTree = "<group>"; };
-		C59B81A41F02403300D17168 /* ImageAllImagesCollectionViewCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAllImagesCollectionViewCellController.swift; sourceTree = "<group>"; };
 		C59B81A71F02488400D17168 /* AddImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddImageViewController.swift; sourceTree = "<group>"; };
 		C59B81A91F0248C500D17168 /* AddImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddImageView.swift; sourceTree = "<group>"; };
 		C59B81AC1F024A6700D17168 /* AddImageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddImageTableViewController.swift; sourceTree = "<group>"; };
@@ -365,7 +363,6 @@
 		C59B81A11F023F9D00D17168 /* ImageAllImagesCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				C59B81A41F02403300D17168 /* ImageAllImagesCollectionViewCellController.swift */,
 				C59B81A21F023FF000D17168 /* ImageAllImagesCollectionViewCell.swift */,
 			);
 			name = ImageAllImagesCollectionViewCell;
@@ -858,7 +855,6 @@
 				C5BA7CD51F04EDF0004E619D /* SignUpUsernameTableViewCellController.swift in Sources */,
 				C5BA7CC11F04DA5B004E619D /* SignUpViewController.swift in Sources */,
 				C57BBE2D1F015833009FF893 /* APIGIFsGenerateGIF.swift in Sources */,
-				C59B81A51F02403300D17168 /* ImageAllImagesCollectionViewCellController.swift in Sources */,
 				C57BBE201F0132AB009FF893 /* AvatarMainTableViewCell.swift in Sources */,
 				C59B81B91F026C7400D17168 /* GIFViewController.swift in Sources */,
 				C59B81D61F02883C00D17168 /* GIFImage.swift in Sources */,

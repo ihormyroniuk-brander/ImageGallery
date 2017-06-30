@@ -16,7 +16,7 @@ class ImageAllImagesCollectionViewCell: UICollectionViewCell {
   override init(frame: CGRect) {
     super.init(frame: frame)
     
-    self.backgroundColor = UIColor.lightGray
+    self.backgroundColor = UIColor.gray
     setupAvatarImageView()
     setupWeatherLabel()
     setupAddressLabel()

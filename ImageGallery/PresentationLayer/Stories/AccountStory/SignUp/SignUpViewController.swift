@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class SignUpViewController: UIViewController {
 
@@ -54,9 +55,12 @@ class SignUpViewController: UIViewController {
     let username = signUpTableController.usernameTableViewCellController.username
     let email = signUpTableController.emailTableViewCellController.email
     let password = signUpTableController.passwordTableViewCellController.password
+    SVProgressHUD.show()
     APIUserSignUp.requestWith(username: username, email: email, password: password, avatar: avatar, success: {
+      SVProgressHUD.dismiss()
       self.dismiss(animated: true, completion: nil)
     }) { (error) in
+      SVProgressHUD.dismiss()
       APIErrorAlertController.show(error: error, in: self, animated: true)
     }
   }

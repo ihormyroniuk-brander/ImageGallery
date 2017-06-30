@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SVProgressHUD
 
 class Application {
   
@@ -18,6 +19,7 @@ class Application {
   
   static func launchSetup() {
     CoreData.setup()
+    SVProgressHUD.setDefaultMaskType(.black)
   }
   
   // MARK: User
