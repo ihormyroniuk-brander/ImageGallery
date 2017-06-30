@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4EBF7487F05F8DA293CEE103 /* Pods_ImageGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA4067BCCCCE7320FB9C6F9 /* Pods_ImageGallery.framework */; };
 		C57BBDE61F00FC88009FF893 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BBDE51F00FC88009FF893 /* AppDelegate.swift */; };
-		C57BBDEB1F00FC88009FF893 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57BBDE91F00FC88009FF893 /* Main.storyboard */; };
 		C57BBDED1F00FC88009FF893 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C57BBDEC1F00FC88009FF893 /* Assets.xcassets */; };
 		C57BBDF01F00FC88009FF893 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57BBDEE1F00FC88009FF893 /* LaunchScreen.storyboard */; };
 		C57BBDF91F0100A6009FF893 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BBDF81F0100A6009FF893 /* API.swift */; };
@@ -57,6 +56,7 @@
 		C59B81E21F02A8E300D17168 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81E11F02A8E300D17168 /* LogInView.swift */; };
 		C5A923FC1F062C370093AD8D /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A923FB1F062C370093AD8D /* StandardButton.swift */; };
 		C5A924001F0636830093AD8D /* StandardTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A923FF1F0636830093AD8D /* StandardTextField.swift */; };
+		C5A924051F0676E00093AD8D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A924041F0676E00093AD8D /* CoreLocation.framework */; };
 		C5BA7CBF1F04DA4C004E619D /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CBE1F04DA4C004E619D /* SignUpView.swift */; };
 		C5BA7CC11F04DA5B004E619D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CC01F04DA5B004E619D /* SignUpViewController.swift */; };
 		C5BA7CC41F04E27E004E619D /* SignUpTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CC31F04E27E004E619D /* SignUpTableController.swift */; };
@@ -86,7 +86,6 @@
 		500806CF198F4989FB897EE8 /* Pods-ImageGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageGallery.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageGallery/Pods-ImageGallery.release.xcconfig"; sourceTree = "<group>"; };
 		C57BBDE21F00FC88009FF893 /* ImageGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57BBDE51F00FC88009FF893 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C57BBDEA1F00FC88009FF893 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C57BBDEC1F00FC88009FF893 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C57BBDEF1F00FC88009FF893 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C57BBDF11F00FC88009FF893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -135,6 +134,7 @@
 		C59B81E11F02A8E300D17168 /* LogInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		C5A923FB1F062C370093AD8D /* StandardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardButton.swift; sourceTree = "<group>"; };
 		C5A923FF1F0636830093AD8D /* StandardTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardTextField.swift; sourceTree = "<group>"; };
+		C5A924041F0676E00093AD8D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C5BA7CBE1F04DA4C004E619D /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		C5BA7CC01F04DA5B004E619D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C5BA7CC31F04E27E004E619D /* SignUpTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableController.swift; sourceTree = "<group>"; };
@@ -165,6 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5A924051F0676E00093AD8D /* CoreLocation.framework in Frameworks */,
 				4EBF7487F05F8DA293CEE103 /* Pods_ImageGallery.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,6 +176,7 @@
 		250EEB51EF0C2979EBA5A380 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C5A924041F0676E00093AD8D /* CoreLocation.framework */,
 				1AA4067BCCCCE7320FB9C6F9 /* Pods_ImageGallery.framework */,
 			);
 			name = Frameworks;
@@ -207,7 +209,6 @@
 				C57BBDF71F00FF6D009FF893 /* NetworkingLayer */,
 				C57BBDFF1F0128FA009FF893 /* PresentationLayer */,
 				C57BBE031F012ACB009FF893 /* DevelopmentLayer */,
-				C57BBDE91F00FC88009FF893 /* Main.storyboard */,
 				C57BBDEC1F00FC88009FF893 /* Assets.xcassets */,
 				C57BBDEE1F00FC88009FF893 /* LaunchScreen.storyboard */,
 				C57BBDF11F00FC88009FF893 /* Info.plist */,
@@ -727,7 +728,6 @@
 			files = (
 				C57BBDF01F00FC88009FF893 /* LaunchScreen.storyboard in Resources */,
 				C57BBDED1F00FC88009FF893 /* Assets.xcassets in Resources */,
-				C57BBDEB1F00FC88009FF893 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -860,14 +860,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C57BBDE91F00FC88009FF893 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C57BBDEA1F00FC88009FF893 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C57BBDEE1F00FC88009FF893 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
