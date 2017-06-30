@@ -22,7 +22,7 @@ class GIFViewController: UIViewController {
     APIGIFsGenerateGIF.requestWith(token: Application.user?.token, weather: "Clouds", success: { (URL) in
       self.customView.setupGIFImageView(URL: URL)
     }) { (error) in
-      
+      APIErrorAlertController.show(error: error, in: self, animated: true)
     }
     
     let imageImageViewTapGestureRecognizer = UITapGestureRecognizer()

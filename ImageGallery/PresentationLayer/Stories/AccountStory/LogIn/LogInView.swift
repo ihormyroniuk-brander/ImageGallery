@@ -12,7 +12,7 @@ import SnapKit
 class LogInView: UIView {
 
   override func willMove(toWindow newWindow: UIWindow?) {
-    self.backgroundColor = UIColor.yellow
+    backgroundColor = UIColor.white
     initializeEmailTextField()
     initializePasswordTextField()
     initializeLogInButton()
@@ -25,7 +25,7 @@ class LogInView: UIView {
   
   // MARK: Email TextField
   
-  let emailTextField = UITextField()
+  let emailTextField = StandardTextField()
   
   private func initializeEmailTextField() {
     setupEmailTextField()
@@ -33,9 +33,9 @@ class LogInView: UIView {
   }
   
   private func setupEmailTextField() {
-    emailTextField.backgroundColor = UIColor.red
     emailTextField.keyboardType = .emailAddress
     emailTextField.autocapitalizationType = .none
+    emailTextField.placeholder = "Email"
   }
   
   private func placeEmailTextField() {
@@ -50,7 +50,7 @@ class LogInView: UIView {
   
   // MARK: Password TextField
   
-  let passwordTextField = UITextField()
+  let passwordTextField = StandardTextField()
   
   private func initializePasswordTextField() {
     setupPasswordTextField()
@@ -58,8 +58,8 @@ class LogInView: UIView {
   }
   
   private func setupPasswordTextField() {
-    passwordTextField.backgroundColor = UIColor.green
     passwordTextField.isSecureTextEntry = true
+    passwordTextField.placeholder = "Password"
   }
   
   private func placePasswordTextField() {
@@ -74,7 +74,7 @@ class LogInView: UIView {
   
   // MARK: LogIn Button
   
-  let logInButton = UIButton()
+  let logInButton = StandardButton()
   
   private func initializeLogInButton() {
     setupLogInButton()
@@ -83,7 +83,6 @@ class LogInView: UIView {
   
   private func setupLogInButton() {
     logInButton.setTitle("Log In", for: UIControlState.normal)
-    logInButton.backgroundColor = UIColor.green
   }
   
   private func placeLogInButton() {
@@ -98,7 +97,7 @@ class LogInView: UIView {
   
   // MARK: SignUp Button
   
-  let signUpButton = UIButton()
+  let signUpButton = StandardButton()
   
   private func initializeSignUpButton() {
     setupSignUpButton()
@@ -107,7 +106,6 @@ class LogInView: UIView {
   
   private func setupSignUpButton() {
     signUpButton.setTitle("Sign Up", for: UIControlState.normal)
-    signUpButton.backgroundColor = UIColor.green
   }
   
   private func placeSignUpButton() {

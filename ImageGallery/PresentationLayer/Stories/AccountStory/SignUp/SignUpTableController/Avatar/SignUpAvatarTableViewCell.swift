@@ -44,7 +44,6 @@ class SignUpAvatarTableViewCell: UITableViewCell {
     if avatar != nil {
       avatarImageView.image = avatar
     } else {
-      
     }
   }
 

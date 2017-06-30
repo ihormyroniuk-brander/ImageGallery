@@ -44,7 +44,7 @@ class AddImageViewController: UIViewController {
     APIImagesAddImage.requestWith(token: Application.user?.token, image: image!, description: description, hashtag: hashtag, latitude: 49.9935, longitude: 36.2304, success: { (image) in
       self.navigationController?.popViewController(animated: true)
     }) { (error) in
-      
+      APIErrorAlertController.show(error: error, in: self, animated: true)
     }
   }
 

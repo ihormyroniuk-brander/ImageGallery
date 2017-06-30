@@ -58,6 +58,7 @@
 		C59B81E01F02A8C900D17168 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81DF1F02A8C900D17168 /* LogInViewController.swift */; };
 		C59B81E21F02A8E300D17168 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81E11F02A8E300D17168 /* LogInView.swift */; };
 		C5A923FC1F062C370093AD8D /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A923FB1F062C370093AD8D /* StandardButton.swift */; };
+		C5A924001F0636830093AD8D /* StandardTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A923FF1F0636830093AD8D /* StandardTextField.swift */; };
 		C5BA7CBF1F04DA4C004E619D /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CBE1F04DA4C004E619D /* SignUpView.swift */; };
 		C5BA7CC11F04DA5B004E619D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CC01F04DA5B004E619D /* SignUpViewController.swift */; };
 		C5BA7CC41F04E27E004E619D /* SignUpTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CC31F04E27E004E619D /* SignUpTableController.swift */; };
@@ -137,6 +138,7 @@
 		C59B81DF1F02A8C900D17168 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		C59B81E11F02A8E300D17168 /* LogInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		C5A923FB1F062C370093AD8D /* StandardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardButton.swift; sourceTree = "<group>"; };
+		C5A923FF1F0636830093AD8D /* StandardTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardTextField.swift; sourceTree = "<group>"; };
 		C5BA7CBE1F04DA4C004E619D /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		C5BA7CC01F04DA5B004E619D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C5BA7CC31F04E27E004E619D /* SignUpTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableController.swift; sourceTree = "<group>"; };
@@ -512,6 +514,22 @@
 			path = Standard;
 			sourceTree = "<group>";
 		};
+		C5A923FD1F0636420093AD8D /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				C5A923FE1F06365E0093AD8D /* Standard */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		C5A923FE1F06365E0093AD8D /* Standard */ = {
+			isa = PBXGroup;
+			children = (
+				C5A923FF1F0636830093AD8D /* StandardTextField.swift */,
+			);
+			path = Standard;
+			sourceTree = "<group>";
+		};
 		C5BA7CBD1F04DA03004E619D /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -574,6 +592,7 @@
 		C5BA7CCD1F04E91F004E619D /* Elements */ = {
 			isa = PBXGroup;
 			children = (
+				C5A923FD1F0636420093AD8D /* TextFields */,
 				C5A923F91F062B630093AD8D /* Buttons */,
 				C5BA7CF91F05378B004E619D /* Views */,
 				C5BA7CCE1F04E987004E619D /* TableViewCells */,
@@ -791,6 +810,7 @@
 				C5BA7CDB1F04F0A0004E619D /* SignUpEmailTableViewCellController.swift in Sources */,
 				C57BBDF91F0100A6009FF893 /* API.swift in Sources */,
 				C59B81A31F023FF000D17168 /* ImageAllImagesCollectionViewCell.swift in Sources */,
+				C5A924001F0636830093AD8D /* StandardTextField.swift in Sources */,
 				C57BBE1B1F012F22009FF893 /* MainTableViewController.swift in Sources */,
 				C5BA7CD31F04EDCA004E619D /* SignUpUsernameTableViewCell.swift in Sources */,
 				C5BA7CE41F0505DC004E619D /* AddImageDescriptionTableViewCellController.swift in Sources */,

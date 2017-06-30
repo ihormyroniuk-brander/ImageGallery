@@ -5,6 +5,7 @@ PODS:
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
   - SnapKit (3.2.0)
+  - SVProgressHUD (2.1.2)
   - SwiftGifOrigin (1.6.1)
   - SwiftyJSON (3.1.4)
 
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - FLAnimatedImage (~> 1.0)
   - SDWebImage
   - SnapKit (~> 3.2.0)
+  - SVProgressHUD
   - SwiftGifOrigin (~> 1.6.1)
   - SwiftyJSON
 
@@ -21,9 +23,10 @@ SPEC CHECKSUMS:
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   SwiftGifOrigin: d6679d3ebe9df2e049a84bc52582635107b581f6
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: d3137a447642b724e5cbe3d7368fce8197d0c708
+PODFILE CHECKSUM: 15c5a668a5a36cb6604a0665d0026e1fe1bc2a62
 
 COCOAPODS: 1.2.1

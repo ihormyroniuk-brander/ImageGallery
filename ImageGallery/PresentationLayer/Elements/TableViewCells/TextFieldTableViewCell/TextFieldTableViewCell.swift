@@ -47,7 +47,7 @@ class TextFieldTableViewCell: UITableViewCell {
   
   // MARK: TextField
   
-  var textField: UITextField = UITextField()
+  var textField: UITextField = StandardTextField()
   
   private func initializeTextField() {
     setupTextField()
@@ -55,13 +55,7 @@ class TextFieldTableViewCell: UITableViewCell {
   }
   
   private func setupTextField() {
-    textField.backgroundColor = UIColor.lightGray
-    textField.keyboardType = .emailAddress
-    textField.autocapitalizationType = .none
-    textField.autocorrectionType = .no
-    textField.layer.borderColor = UIColor.darkGray.cgColor
-    textField.layer.borderWidth = 1
-    textField.layer.cornerRadius = 8
+    
   }
   
   private func placeTextField() {

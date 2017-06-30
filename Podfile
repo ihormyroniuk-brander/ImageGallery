@@ -12,4 +12,5 @@ target 'ImageGallery' do
   pod 'SDWebImage'
   pod 'FLAnimatedImage', '~> 1.0'
   pod 'SwiftGifOrigin', '~> 1.6.1'
+  pod 'SVProgressHUD'
 end

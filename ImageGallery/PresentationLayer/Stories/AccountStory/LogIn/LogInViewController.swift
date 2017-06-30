@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class LogInViewController: UIViewController {
 
@@ -30,15 +31,15 @@ class LogInViewController: UIViewController {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     
-    let email = "k@k.k"
+    /*let email = "k@k.k"
     let password = "k"
     APIUserLogIn.requestWith(email: email, password: password, success: { (user) in
       Application.user = user
       self.navigationController?.pushViewController(MainViewController(), animated: true)
     }) { (error) in
       
-    }
-
+    }*/
+    self.navigationItem.title = "Log In"
   }
   
   // MARK: Actions
@@ -46,11 +47,14 @@ class LogInViewController: UIViewController {
   func logInButtonTouchUpInsideEventAction(sender: UIButton!) {
     let email = self.customView.emailTextField.text
     let password = self.customView.passwordTextField.text
+    SVProgressHUD.show()
     APIUserLogIn.requestWith(email: email, password: password, success: { (user) in
+      SVProgressHUD.dismiss()
       Application.user = user
       self.navigationController?.pushViewController(MainViewController(), animated: true)
     }) { (error) in
-      
+      SVProgressHUD.dismiss()
+      APIErrorAlertController.show(error: error, in: self, animated: true)
     }
   }
   
