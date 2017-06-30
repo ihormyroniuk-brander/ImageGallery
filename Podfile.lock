@@ -1,6 +1,9 @@
 PODS:
   - Alamofire (4.4.0)
   - FLAnimatedImage (1.0.12)
+  - MagicalRecord (2.3.2):
+    - MagicalRecord/Core (= 2.3.2)
+  - MagicalRecord/Core (2.3.2)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
@@ -12,6 +15,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - FLAnimatedImage (~> 1.0)
+  - MagicalRecord
   - SDWebImage
   - SnapKit (~> 3.2.0)
   - SVProgressHUD
@@ -21,12 +25,13 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   SwiftGifOrigin: d6679d3ebe9df2e049a84bc52582635107b581f6
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 15c5a668a5a36cb6604a0665d0026e1fe1bc2a62
+PODFILE CHECKSUM: c71dd655486120b6a4dd2dbdcdb3df17e421517b
 
 COCOAPODS: 1.2.1

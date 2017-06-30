@@ -15,8 +15,58 @@ class GIFView: UIView {
   
   override func willMove(toWindow newWindow: UIWindow?) {
     placeGIFImageView()
+    backgroundColor = UIColor.gray.withAlphaComponent(0.8)
+    initializeEmailTextField()
+    initializeLogInButton()
   }
 
+  // MARK: Email TextField
+  
+  let weatherTextField = StandardTextField()
+  
+  private func initializeEmailTextField() {
+    setupEmailTextField()
+    placeEmailTextField()
+  }
+  
+  private func setupEmailTextField() {
+    weatherTextField.keyboardType = .default
+    weatherTextField.placeholder = "Weather"
+  }
+  
+  private func placeEmailTextField() {
+    self.addSubview(weatherTextField)
+    weatherTextField.snp.makeConstraints { (make) -> Void in
+      make.left.equalTo(32)
+      make.right.equalTo(-32)
+      make.top.equalTo(66)
+      make.height.equalTo(44)
+    }
+  }
+
+  // MARK: LogIn Button
+  
+  let generateGifButton = StandardButton()
+  
+  private func initializeLogInButton() {
+    setupLogInButton()
+    placeLogInButton()
+  }
+  
+  private func setupLogInButton() {
+    generateGifButton.setTitle("Generate GIF", for: UIControlState.normal)
+  }
+  
+  private func placeLogInButton() {
+    self.addSubview(generateGifButton)
+    generateGifButton.snp.makeConstraints { (make) -> Void in
+      make.leading.equalTo(weatherTextField)
+      make.trailing.equalTo(weatherTextField)
+      make.height.equalTo(weatherTextField)
+      make.top.equalTo(weatherTextField.snp.bottom).offset(16)
+    }
+  }
+  
   func placeGIFImageView() {
     self.addSubview(GIFImageView)
     GIFImageView.contentMode = .scaleAspectFit

@@ -13,4 +13,5 @@ target 'ImageGallery' do
   pod 'FLAnimatedImage', '~> 1.0'
   pod 'SwiftGifOrigin', '~> 1.6.1'
   pod 'SVProgressHUD'
+  pod 'MagicalRecord'
 end

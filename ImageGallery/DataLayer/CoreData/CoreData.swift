@@ -13,6 +13,7 @@ import CoreData
 class CoreData: NSObject {
   
   static var mainManagedObjectContext: NSManagedObjectContext?
+  static var persistentStoreCoordinator: NSPersistentStoreCoordinator?
   
   static func setup() {
     guard let modelURL = Bundle.main.url(forResource: "ImageGallery", withExtension:"momd") else {
@@ -26,6 +27,7 @@ class CoreData: NSObject {
     let psc = NSPersistentStoreCoordinator(managedObjectModel: mom)
     CoreData.mainManagedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
     CoreData.mainManagedObjectContext?.persistentStoreCoordinator = psc
+    persistentStoreCoordinator = psc
     
     do {
       try psc.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: FileSystem.imageGallerySQLiteFile, options: nil)
@@ -34,5 +36,10 @@ class CoreData: NSObject {
     }
   }
   
+  static var backgroundManagedObjectContext: NSManagedObjectContext {
+    get {
+      return NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+    }
+  }
   
 }

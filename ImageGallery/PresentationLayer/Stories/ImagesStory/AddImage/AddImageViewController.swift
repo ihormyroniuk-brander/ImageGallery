@@ -32,6 +32,7 @@ class AddImageViewController: UIViewController {
     
     let button1 = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(AddImageViewController.addImageBarButtonItemAction))
     self.navigationItem.rightBarButtonItem  = button1
+    self.navigationItem.title = "Add image"
   }
   
   // MARK: Actions

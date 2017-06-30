@@ -25,6 +25,7 @@ class AllImagesViewController: UIViewController {
     let button1 = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(AllImagesViewController.sayHello))
     let button2 = UIBarButtonItem(title: "GIF", style: .plain, target: self, action: #selector(AllImagesViewController.sayHi))
     self.navigationItem.rightBarButtonItems  = [button1, button2]
+    self.navigationItem.title = "All images"
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -45,6 +46,8 @@ class AllImagesViewController: UIViewController {
   }
   
   func sayHi(sender: UIBarButtonItem) {
-    present(GIFViewController(), animated: false, completion: nil)
+    let viewController = GIFViewController()
+    viewController.modalPresentationStyle = .overCurrentContext
+    present(viewController, animated: false, completion: nil)
   }
 }
