@@ -51,8 +51,8 @@ class APIImagesAddImage {
     let headers = APIImagesAddImage.headersWith(token: token)
     let parameters = APIImagesAddImage.parametersWith(description: description, hashtag: hashtag, latitude: latitude, longitude: longitude)
     Alamofire.upload(multipartFormData: { (multipartFormData) in
-      let imagePNG = UIImagePNGRepresentation(image)!
-      multipartFormData.append(imagePNG, withName: "image", fileName: "image", mimeType: "image/png")
+      let imagePNG = UIImageJPEGRepresentation(image, 0.4)!
+      multipartFormData.append(imagePNG, withName: "image", fileName: "image", mimeType: "image/jpeg")
       for (key, value) in parameters {
         multipartFormData.append((value as AnyObject).data(using: String.Encoding.utf8.rawValue)!, withName: key)
       }
@@ -61,6 +61,7 @@ class APIImagesAddImage {
       case .success(let upload, _, _):
         upload.responseJSON { response in
           let responseJSON = JSON(data: response.data!)
+          print(responseJSON)
           if response.response?.statusCode == 201 {
             let image = APIImagesAddImage.imageFrom(responseJSON: responseJSON)
             success?(image)

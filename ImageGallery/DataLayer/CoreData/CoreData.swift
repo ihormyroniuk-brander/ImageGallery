@@ -38,7 +38,9 @@ class CoreData: NSObject {
   
   static var backgroundManagedObjectContext: NSManagedObjectContext {
     get {
-      return NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+      let backgroundManagedObjectContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+      backgroundManagedObjectContext.parent = mainManagedObjectContext
+      return backgroundManagedObjectContext
     }
   }
   
