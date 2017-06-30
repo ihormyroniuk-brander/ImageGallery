@@ -11,7 +11,6 @@ import UIKit
 class AddImageView: UIView {
 
   override func willMove(toWindow newWindow: UIWindow?) {
-    self.backgroundColor = UIColor.orange
   }
   
   override func willMove(toSuperview newSuperview: UIView?) {

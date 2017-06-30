@@ -16,7 +16,7 @@ class ImageAllImagesCollectionViewCell: UICollectionViewCell {
   override init(frame: CGRect) {
     super.init(frame: frame)
     
-    self.backgroundColor = UIColor.yellow
+    self.backgroundColor = UIColor.lightGray
     setupAvatarImageView()
     setupWeatherLabel()
     setupAddressLabel()
@@ -39,7 +39,7 @@ class ImageAllImagesCollectionViewCell: UICollectionViewCell {
   private func placeImageImageView() {
     self.addSubview(imageImageView)
     imageImageView.snp.makeConstraints { (make) -> Void in
-      make.height.equalTo(80)
+      make.height.equalTo(100)
       make.left.equalToSuperview().offset(0)
       make.top.equalToSuperview().offset(0)
       make.right.equalToSuperview().offset(0)
@@ -49,7 +49,7 @@ class ImageAllImagesCollectionViewCell: UICollectionViewCell {
   
   func set(imageURL: URL) {
     imageImageView.sd_setImage(with: imageURL,
-                               placeholderImage: UIImage(named: "placeholder.png"))
+                               placeholderImage: UIImage(named: "image_placeholder"))
   }
   
   // MARK: Weather Label

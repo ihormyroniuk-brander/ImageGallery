@@ -23,8 +23,7 @@ class SendButtonMainTableViewCell: UITableViewCell {
   }
   
   private func setupAvatarImageView() {
-    sendButton.setTitle("SEND", for: UIControlState.normal)
-    
+    sendButton.setTitle("Send", for: UIControlState.normal)
     self.addSubview(sendButton)
     sendButton.snp.makeConstraints { (make) -> Void in
       make.height.equalTo(32)

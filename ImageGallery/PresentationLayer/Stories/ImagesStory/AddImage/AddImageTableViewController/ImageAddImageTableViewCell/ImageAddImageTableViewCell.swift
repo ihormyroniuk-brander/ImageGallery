@@ -35,11 +35,11 @@ class ImageAddImageTableViewCell: UITableViewCell {
   private func placeImageImageView() {
     self.addSubview(imageImageView)
     imageImageView.snp.makeConstraints { (make) -> Void in
-      make.height.equalTo(144)
-      make.left.equalToSuperview().offset(24)
-      make.top.equalToSuperview().offset(24)
-      make.right.equalToSuperview().offset(-24)
-      make.bottom.equalToSuperview().offset(-24)
+      make.width.equalTo(224)
+      make.height.equalTo(168)
+      make.top.equalToSuperview().offset(16)
+      make.bottom.equalToSuperview().offset(-16)
+      make.centerX.equalToSuperview()
     }
   }
   
@@ -47,7 +47,7 @@ class ImageAddImageTableViewCell: UITableViewCell {
     if image != nil {
       imageImageView.image = image;
     } else {
-      imageImageView.image = UIImage(named: "photo")!;
+      imageImageView.image = UIImage(named: "image_placeholder");
     }
   }
   

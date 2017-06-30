@@ -22,9 +22,6 @@ class AllImagesViewController: UIViewController {
     super.viewDidLoad()
     
     setupView()
-        // Do any additional setup after loading the view.
-    
-    
     let button1 = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(AllImagesViewController.sayHello))
     let button2 = UIBarButtonItem(title: "GIF", style: .plain, target: self, action: #selector(AllImagesViewController.sayHi))
     self.navigationItem.rightBarButtonItems  = [button1, button2]
