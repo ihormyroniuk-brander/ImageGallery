@@ -31,15 +31,15 @@ class AvatarMainTableViewCell: UITableViewCell {
     avatarImageView?.snp.makeConstraints { (make) -> Void in
       make.width.equalTo(168)
       make.height.equalTo(168)
-      make.top.equalToSuperview().offset(100)
-      make.bottom.equalToSuperview().offset(-50)
+      make.top.equalToSuperview().offset(16)
+      make.bottom.equalToSuperview().offset(-16)
       make.centerX.equalToSuperview()
     }
     
   }
   
   public func set(avatarURL: URL) {
-    avatarImageView?.sd_setImage(with: avatarURL, placeholderImage: UIImage(named: "placeholder.png"))
+    avatarImageView?.sd_setImage(with: avatarURL, placeholderImage: UIImage(named: "avatar_placeholder"))
   }
   
 }

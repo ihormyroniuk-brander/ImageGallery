@@ -69,6 +69,7 @@ class SignUpView: SetupView {
   func setText() {
     closeBarButtonItem.title = "Close"
     signUpBarButtonItem.title = "Sign Up"
+    navigationItem?.title = "Sign Up"
   }
   
 }

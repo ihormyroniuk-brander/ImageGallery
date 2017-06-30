@@ -57,7 +57,15 @@ class SignUpViewController: UIViewController {
     APIUserSignUp.requestWith(username: username, email: email, password: password, avatar: avatar, success: {
       self.dismiss(animated: true, completion: nil)
     }) { (error) in
+      let alertController = UIAlertController(title: "Default Style", message: "A standard alert.", preferredStyle: .alert)
+
+      let OKAction = UIAlertAction(title: "dfdf", style: .default, handler: nil)
+      alertController.addAction(OKAction)
       
+      let cancelAction = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
+      alertController.addAction(cancelAction)
+      
+      self.present(alertController, animated: true, completion: nil)
     }
   }
   

@@ -19,10 +19,21 @@ class MainEmailTextFieldTableViewCell: TextFieldTableViewCell {
     self.selectionStyle = .none
     self.backgroundColor = UIColor.white
     initializeTextField()
+    initializeLabel()
   }
   
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
+  }
+  
+  // MARK: Label
+  
+  private func initializeLabel() {
+    setupLabel()
+  }
+  
+  private func setupLabel() {
+    label.text = "Email"
   }
   
   // MARK: TextField
@@ -32,10 +43,8 @@ class MainEmailTextFieldTableViewCell: TextFieldTableViewCell {
   }
   
   private func setupTextField() {
-    textField.backgroundColor = UIColor.red
-    textField.keyboardType = .default
-    textField.autocapitalizationType = .none
     textField.isUserInteractionEnabled = false
+    textField.layer.borderWidth = 0
   }
   
 }

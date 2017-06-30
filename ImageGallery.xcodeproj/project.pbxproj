@@ -57,6 +57,7 @@
 		C59B81D61F02883C00D17168 /* GIFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81D51F02883C00D17168 /* GIFImage.swift */; };
 		C59B81E01F02A8C900D17168 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81DF1F02A8C900D17168 /* LogInViewController.swift */; };
 		C59B81E21F02A8E300D17168 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59B81E11F02A8E300D17168 /* LogInView.swift */; };
+		C5A923FC1F062C370093AD8D /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A923FB1F062C370093AD8D /* StandardButton.swift */; };
 		C5BA7CBF1F04DA4C004E619D /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CBE1F04DA4C004E619D /* SignUpView.swift */; };
 		C5BA7CC11F04DA5B004E619D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CC01F04DA5B004E619D /* SignUpViewController.swift */; };
 		C5BA7CC41F04E27E004E619D /* SignUpTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CC31F04E27E004E619D /* SignUpTableController.swift */; };
@@ -78,6 +79,7 @@
 		C5BA7CED1F050AF0004E619D /* MainEmailTextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CEC1F050AF0004E619D /* MainEmailTextFieldTableViewCell.swift */; };
 		C5BA7CEF1F050AFF004E619D /* MainEmailTextFieldTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CEE1F050AFF004E619D /* MainEmailTextFieldTableViewCellController.swift */; };
 		C5BA7CFB1F053810004E619D /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CFA1F053810004E619D /* SetupView.swift */; };
+		C5BA7D001F054A53004E619D /* APIErrorAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA7CFF1F054A53004E619D /* APIErrorAlertController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,6 +136,7 @@
 		C59B81D51F02883C00D17168 /* GIFImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFImage.swift; sourceTree = "<group>"; };
 		C59B81DF1F02A8C900D17168 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		C59B81E11F02A8E300D17168 /* LogInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		C5A923FB1F062C370093AD8D /* StandardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardButton.swift; sourceTree = "<group>"; };
 		C5BA7CBE1F04DA4C004E619D /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		C5BA7CC01F04DA5B004E619D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C5BA7CC31F04E27E004E619D /* SignUpTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableController.swift; sourceTree = "<group>"; };
@@ -155,6 +158,7 @@
 		C5BA7CEC1F050AF0004E619D /* MainEmailTextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainEmailTextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		C5BA7CEE1F050AFF004E619D /* MainEmailTextFieldTableViewCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainEmailTextFieldTableViewCellController.swift; sourceTree = "<group>"; };
 		C5BA7CFA1F053810004E619D /* SetupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		C5BA7CFF1F054A53004E619D /* APIErrorAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIErrorAlertController.swift; sourceTree = "<group>"; };
 		CC4007E840A9C41F8532C5BC /* Pods-ImageGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageGallery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageGallery/Pods-ImageGallery.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -248,6 +252,7 @@
 		C57BBE001F0129C5009FF893 /* Stories */ = {
 			isa = PBXGroup;
 			children = (
+				C5BA7CFD1F0549A3004E619D /* AlertStory */,
 				C59B81DA1F02A61700D17168 /* AccountStory */,
 				C57BBE011F012A38009FF893 /* MainStory */,
 				C59B81981F0239B100D17168 /* ImagesStory */,
@@ -491,6 +496,22 @@
 			path = LogIn;
 			sourceTree = "<group>";
 		};
+		C5A923F91F062B630093AD8D /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				C5A923FA1F062BF10093AD8D /* Standard */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		C5A923FA1F062BF10093AD8D /* Standard */ = {
+			isa = PBXGroup;
+			children = (
+				C5A923FB1F062C370093AD8D /* StandardButton.swift */,
+			);
+			path = Standard;
+			sourceTree = "<group>";
+		};
 		C5BA7CBD1F04DA03004E619D /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -553,6 +574,7 @@
 		C5BA7CCD1F04E91F004E619D /* Elements */ = {
 			isa = PBXGroup;
 			children = (
+				C5A923F91F062B630093AD8D /* Buttons */,
 				C5BA7CF91F05378B004E619D /* Views */,
 				C5BA7CCE1F04E987004E619D /* TableViewCells */,
 			);
@@ -600,6 +622,22 @@
 				C5BA7CFA1F053810004E619D /* SetupView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C5BA7CFD1F0549A3004E619D /* AlertStory */ = {
+			isa = PBXGroup;
+			children = (
+				C5BA7CFE1F0549E3004E619D /* APIErrorAlert */,
+			);
+			path = AlertStory;
+			sourceTree = "<group>";
+		};
+		C5BA7CFE1F0549E3004E619D /* APIErrorAlert */ = {
+			isa = PBXGroup;
+			children = (
+				C5BA7CFF1F054A53004E619D /* APIErrorAlertController.swift */,
+			);
+			path = APIErrorAlert;
 			sourceTree = "<group>";
 		};
 		E03FAA19CEFF573272A946B9 /* Pods */ = {
@@ -771,6 +809,7 @@
 				C59B81D21F02881A00D17168 /* Image.swift in Sources */,
 				C59B81B41F024F6500D17168 /* ImageAddImageTableViewCellController.swift in Sources */,
 				C57BBE1D1F012F56009FF893 /* MainTableView.swift in Sources */,
+				C5BA7D001F054A53004E619D /* APIErrorAlertController.swift in Sources */,
 				C5BA7CFB1F053810004E619D /* SetupView.swift in Sources */,
 				C57BBE0E1F012B55009FF893 /* DefaultTableViewController.swift in Sources */,
 				C5BA7CE61F0505EF004E619D /* AddImageHashtagTableViewCellController.swift in Sources */,
@@ -790,6 +829,7 @@
 				C59B81C71F0281EF00D17168 /* ImageGallery.xcdatamodeld in Sources */,
 				C57BBE131F012B55009FF893 /* TableViewSectionController.swift in Sources */,
 				C59B81AA1F0248C500D17168 /* AddImageView.swift in Sources */,
+				C5A923FC1F062C370093AD8D /* StandardButton.swift in Sources */,
 				C57BBE181F012BA3009FF893 /* MainView.swift in Sources */,
 				C59B81CF1F0285AA00D17168 /* Application.swift in Sources */,
 				C59B81E01F02A8C900D17168 /* LogInViewController.swift in Sources */,

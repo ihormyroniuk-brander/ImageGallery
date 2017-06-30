@@ -12,8 +12,6 @@ class MainTableView: UITableView {
 
   init() {
     super.init(frame: CGRect.zero, style: UITableViewStyle.plain)
-    
-    self.backgroundColor = UIColor.red
     self.separatorStyle = UITableViewCellSeparatorStyle.none
   }
   

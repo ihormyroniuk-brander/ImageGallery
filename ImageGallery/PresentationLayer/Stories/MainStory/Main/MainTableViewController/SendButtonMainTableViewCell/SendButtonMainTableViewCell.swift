@@ -10,7 +10,7 @@ import UIKit
 
 class SendButtonMainTableViewCell: UITableViewCell {
 
-  var sendButton: UIButton = UIButton()
+  var sendButton: UIButton = StandardButton()
   
   override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -23,15 +23,14 @@ class SendButtonMainTableViewCell: UITableViewCell {
   }
   
   private func setupAvatarImageView() {
-    sendButton.backgroundColor = UIColor.blue
     sendButton.setTitle("SEND", for: UIControlState.normal)
     
     self.addSubview(sendButton)
     sendButton.snp.makeConstraints { (make) -> Void in
       make.height.equalTo(32)
-      make.left.equalToSuperview().offset(32)
+      make.left.equalToSuperview().offset(64)
       make.top.equalToSuperview().offset(16)
-      make.right.equalToSuperview().offset(-32)
+      make.right.equalToSuperview().offset(-64)
       make.bottom.equalToSuperview().offset(-16)
     }
     
