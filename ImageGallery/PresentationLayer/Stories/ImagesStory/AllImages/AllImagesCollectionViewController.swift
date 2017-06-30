@@ -42,15 +42,15 @@ class AllImagesCollectionViewController: UICollectionViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     APIImagesAllImages.requestWith(token: Application.user?.token, success: { (images, GIFImages) in
-      /*self.images = images
-      self.collectionView?.reloadData()*/
+      self.images = images
+      self.collectionView?.reloadData()
       
-      let privateManagedObjectContext = CoreData.backgroundManagedObjectContext
+      /*let privateManagedObjectContext = CoreData.backgroundManagedObjectContext
       privateManagedObjectContext.perform({
         for image in images {
           let moImage = MOImage(context: privateManagedObjectContext)
         }
-      })
+      })*/
     }) { (error) in
       
     }
