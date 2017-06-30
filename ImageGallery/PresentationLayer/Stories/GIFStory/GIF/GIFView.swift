@@ -14,12 +14,7 @@ class GIFView: UIView {
   let GIFImageView = UIImageView()
   
   override func willMove(toWindow newWindow: UIWindow?) {
-    self.backgroundColor = UIColor.orange
     placeGIFImageView()
-  }
-  
-  override func willMove(toSuperview newSuperview: UIView?) {
-    
   }
 
   func placeGIFImageView() {
