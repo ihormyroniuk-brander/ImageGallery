@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class AddImageViewController: UIViewController {
 
@@ -41,9 +42,12 @@ class AddImageViewController: UIViewController {
     let image = self.addImageTableViewController.imageAddImageTableViewCellController.image
     let description = self.addImageTableViewController.descriptionTableViewCellController.details
     let hashtag = self.addImageTableViewController.hashtagTableViewCellController.hashtag
+    SVProgressHUD.show()
     APIImagesAddImage.requestWith(token: Application.user?.token, image: image!, description: description, hashtag: hashtag, latitude: 49.9935, longitude: 36.2304, success: { (image) in
+      SVProgressHUD.dismiss()
       self.navigationController?.popViewController(animated: true)
     }) { (error) in
+      SVProgressHUD.dismiss()
       APIErrorAlertController.show(error: error, in: self, animated: true)
     }
   }

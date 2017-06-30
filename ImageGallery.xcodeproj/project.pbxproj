@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4EBF7487F05F8DA293CEE103 /* Pods_ImageGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA4067BCCCCE7320FB9C6F9 /* Pods_ImageGallery.framework */; };
 		C57BBDE61F00FC88009FF893 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BBDE51F00FC88009FF893 /* AppDelegate.swift */; };
-		C57BBDE81F00FC88009FF893 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BBDE71F00FC88009FF893 /* ViewController.swift */; };
 		C57BBDEB1F00FC88009FF893 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57BBDE91F00FC88009FF893 /* Main.storyboard */; };
 		C57BBDED1F00FC88009FF893 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C57BBDEC1F00FC88009FF893 /* Assets.xcassets */; };
 		C57BBDF01F00FC88009FF893 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57BBDEE1F00FC88009FF893 /* LaunchScreen.storyboard */; };
@@ -87,7 +86,6 @@
 		500806CF198F4989FB897EE8 /* Pods-ImageGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageGallery.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageGallery/Pods-ImageGallery.release.xcconfig"; sourceTree = "<group>"; };
 		C57BBDE21F00FC88009FF893 /* ImageGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57BBDE51F00FC88009FF893 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C57BBDE71F00FC88009FF893 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C57BBDEA1F00FC88009FF893 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C57BBDEC1F00FC88009FF893 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C57BBDEF1F00FC88009FF893 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -209,7 +207,6 @@
 				C57BBDF71F00FF6D009FF893 /* NetworkingLayer */,
 				C57BBDFF1F0128FA009FF893 /* PresentationLayer */,
 				C57BBE031F012ACB009FF893 /* DevelopmentLayer */,
-				C57BBDE71F00FC88009FF893 /* ViewController.swift */,
 				C57BBDE91F00FC88009FF893 /* Main.storyboard */,
 				C57BBDEC1F00FC88009FF893 /* Assets.xcassets */,
 				C57BBDEE1F00FC88009FF893 /* LaunchScreen.storyboard */,
@@ -700,8 +697,8 @@
 				TargetAttributes = {
 					C57BBDE11F00FC88009FF893 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 7MSPFU2KV4;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = WZ66AG8SL9;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -798,7 +795,6 @@
 				C57BBDFB1F010DF0009FF893 /* APIUserLogIn.swift in Sources */,
 				C59B81C91F02844A00D17168 /* CoreData.swift in Sources */,
 				C57BBE0D1F012B55009FF893 /* DefaultTableViewCellController.swift in Sources */,
-				C57BBDE81F00FC88009FF893 /* ViewController.swift in Sources */,
 				C57BBE101F012B55009FF893 /* DefaultTableViewSectionHeaderFooterViewController.swift in Sources */,
 				C57BBE141F012B55009FF893 /* TableViewSectionHeaderFooterViewController.swift in Sources */,
 				C59B81A81F02488400D17168 /* AddImageViewController.swift in Sources */,
@@ -981,11 +977,14 @@
 			baseConfigurationReference = CC4007E840A9C41F8532C5BC /* Pods-ImageGallery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7MSPFU2KV4;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = WZ66AG8SL9;
 				INFOPLIST_FILE = ImageGallery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ua.brander.ImageGallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "39bfd804-848e-4768-a80e-6fb20299cbd6";
+				PROVISIONING_PROFILE_SPECIFIER = testAlexanderOrlov3;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -995,11 +994,14 @@
 			baseConfigurationReference = 500806CF198F4989FB897EE8 /* Pods-ImageGallery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7MSPFU2KV4;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = WZ66AG8SL9;
 				INFOPLIST_FILE = ImageGallery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ua.brander.ImageGallery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "39bfd804-848e-4768-a80e-6fb20299cbd6";
+				PROVISIONING_PROFILE_SPECIFIER = testAlexanderOrlov3;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
